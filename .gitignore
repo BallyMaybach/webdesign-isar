@@ -1,0 +1,10 @@
+# Large binary files
+*.zip
+annikablendl.com.png
+nachhilfe-screenshot.png
+toelzer-land-tuerkisfarbene-isar.jpg
+profile-pic.jpg
+
+# Temp files
+testfile.txt
+UsersBallyAppDataLocalTempwp-theme-buildwebdesign-isarassets/

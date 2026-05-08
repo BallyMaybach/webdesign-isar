@@ -4,397 +4,347 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webdesign Beispiele & Referenzen | Websites aus Wolfratshausen & München</title>
-  <meta name="description" content="Echte Webdesign-Referenzen von Balthasar Beyer: moderne Landingpages und lokale Websites für Unternehmen im Isartal. Lassen Sie sich inspirieren.">
+
+  <!-- SEO -->
+  <title>Webdesign Beispiele &amp; Referenzen | Webdesign Isar</title>
+  <meta name="description" content="Echte Webdesign-Referenzen aus dem Isartal: moderne Landingpages und lokale Websites für Unternehmen. Lassen Sie sich inspirieren.">
   <link rel="canonical" href="https://webdesign-isar.de/beispiele.html">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta name="author" content="Balthasar Beyer">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
+  <meta property="og:locale" content="de_DE">
+  <meta property="og:site_name" content="Webdesign Isar">
   <meta property="og:url" content="https://webdesign-isar.de/beispiele.html">
-  <meta property="og:title" content="Webdesign Beispiele & Referenzen | Wolfratshausen & München">
-  <meta property="og:description" content="Echte Webdesign-Referenzen: moderne Landingpages und lokale Websites für Unternehmen im Isartal.">
+  <meta property="og:title" content="Webdesign Beispiele &amp; Referenzen | Webdesign Isar">
+  <meta property="og:description" content="Echte Webdesign-Referenzen aus dem Isartal: moderne Landingpages und lokale Websites.">
+  <meta property="og:image" content="https://webdesign-isar.de/webdesigner-wolfratshausen-isartal.webp">
+  <meta property="og:image:width" content="2000">
+  <meta property="og:image:height" content="823">
+
+  <!-- Twitter -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Webdesign Beispiele &amp; Referenzen">
+  <meta name="twitter:description" content="Echte Webdesign-Referenzen aus dem Isartal.">
+  <meta name="twitter:image" content="https://webdesign-isar.de/webdesigner-wolfratshausen-isartal.webp">
+
+  <meta name="theme-color" content="#0071E3">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
+  <!-- Preload LCP -->
+  <link rel="preload" as="image" href="annikablendl.com.png" fetchpriority="high">
+
   <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="styles.css">
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
-      theme: {
-        extend: {
-          colors: {
-            background: "#FAFAF9",
-            primary: "#292524",
-            accent: "#0071E3",
-            card: "#FFFFFF",
-            surface: "#F5F5F4"
-          },
-          fontFamily: {
-            sans: ['Inter', 'sans-serif'],
-            serif: ['DM Serif Display', 'serif'],
-            mono: ['Space Mono', 'monospace'],
-          }
-        }
-      }
+      theme: { extend: {
+        colors: { background: "#FAFAF9", primary: "#292524", accent: "#0071E3", card: "#FFFFFF", surface: "#F5F5F4" },
+        fontFamily: { sans: ['Inter','sans-serif'], serif: ['DM Serif Display','serif'], mono: ['Space Mono','monospace'] }
+      }}
     }
   </script>
 
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
-  <script src="https://unpkg.com/@phosphor-icons/web"></script>
+  <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
 
-  <style>
-    :root { background-color: #FAFAF9; color: #292524; }
-    html { scroll-behavior: smooth; }
-    body {
-      overflow-x: hidden;
-      font-family: 'Inter', sans-serif;
-      -webkit-font-smoothing: antialiased;
-      background-color: #FAFAF9;
-    }
-    .text-drama { font-family: 'DM Serif Display', serif; }
-    .text-mono-data { font-family: 'Space Mono', monospace; }
-    .magnetic-btn { transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-    .magnetic-btn:hover { transform: scale(1.03); }
-    .btn-layer { transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
-    .magnetic-btn:hover .btn-layer { transform: translateX(0); }
+  <!-- Schema.org: BreadcrumbList -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    "itemListElement": [
+      { "@type": "ListItem", "position": 1, "name": "Startseite", "item": "https://webdesign-isar.de/" },
+      { "@type": "ListItem", "position": 2, "name": "Beispiele", "item": "https://webdesign-isar.de/beispiele.html" }
+    ]
+  }
+  </script>
 
-    .nav-scrolled {
-      background-color: rgba(255, 255, 255, 0.92) !important;
-      backdrop-filter: blur(20px);
-      border-bottom: 1px solid rgba(29, 29, 31, 0.07);
-      box-shadow: 0 2px 24px rgba(0, 0, 0, 0.07);
-    }
-
-    .ham-line {
-      display: block; width: 22px; height: 2px;
-      background-color: currentColor; border-radius: 2px;
-      transition: transform 0.25s ease, opacity 0.2s ease;
-      transform-origin: center;
-    }
-    #menu-btn.open .ham-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
-    #menu-btn.open .ham-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
-    #menu-btn.open .ham-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(36px);
-    }
-
-    #mobile-menu {
-      transform: translateY(-12px);
-      opacity: 0;
-      pointer-events: none;
-      transition: transform 0.28s cubic-bezier(0.4,0,0.2,1), opacity 0.28s ease;
-    }
-    #mobile-menu.open {
-      transform: translateY(0);
-      opacity: 1;
-      pointer-events: auto;
-    }
-
-
-    /* Iframe container */
-    .iframe-wrapper {
-      position: relative;
-      width: 100%;
-      height: clamp(340px, 60vh, 720px);
-    }
-    .iframe-wrapper iframe {
-      position: absolute;
-      inset: 0;
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
-  </style>
+  <!-- Schema.org: CollectionPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Webdesign Beispiele & Referenzen",
+    "description": "Aktuelle Webdesign-Referenzen von Webdesign Isar.",
+    "url": "https://webdesign-isar.de/beispiele.html",
+    "isPartOf": { "@id": "https://webdesign-isar.de/#website" }
+  }
+  </script>
 </head>
 
-<body class="w-full relative selection:bg-accent/20 selection:text-primary">
+<body class="w-full relative">
+
+  <a href="#main" class="sr-only focus:not-sr-only focus:fixed focus:top-2 focus:left-2 focus:z-[100] focus:bg-white focus:text-primary focus:px-4 focus:py-2 focus:rounded-md">Zum Inhalt springen</a>
 
   <!-- NAVBAR -->
-  <nav class="navbar fixed top-0 left-0 z-50 w-full h-[90px] transition-all duration-500 bg-white text-primary drop-shadow-sm flex items-center">
-    <div class="max-w-7xl mx-auto w-full flex items-center justify-between px-6">
-      <a href="index.html" class="flex items-center gap-3">
-        <svg viewBox="0 0 24 24" fill="none" class="h-9 w-auto" xmlns="http://www.w3.org/2000/svg">
+  <nav class="navbar fixed top-0 left-0 z-50 w-full transition-all duration-500 bg-white text-primary drop-shadow-sm flex items-center" aria-label="Hauptnavigation">
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between px-4 md:px-6">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Webdesign Isar – Startseite">
+        <svg viewBox="0 0 24 24" fill="none" class="h-8 md:h-9 w-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
           <path d="M12 2C12 2 5 10 5 15C5 18.866 8.134 22 12 22C15.866 22 19 18.866 19 15C19 10 12 2 12 2Z" fill="#0071E3" />
           <path d="M12 2C12 2 5 10 5 15C5 18.866 8.134 22 12 22V2Z" fill="currentColor" fill-opacity="0.9" />
         </svg>
-        <span class="font-bold text-lg tracking-tight hidden sm:block">Webdesign Isar</span>
+        <span class="font-bold text-base md:text-lg tracking-tight">Webdesign Isar</span>
       </a>
-
-      <div class="hidden md:flex items-center gap-8 text-sm font-semibold opacity-90">
-        <a href="index.html" class="hover:text-accent transition-colors hover:-translate-y-px transform block">Home</a>
-        <a href="beispiele.html" class="text-accent font-bold hover:-translate-y-px transform transition-all block">Beispiele</a>
-        <a href="preise.html" class="hover:text-accent transition-colors hover:-translate-y-px transform block">Preise & Rezensionen</a>
-      </div>
-
-      <div class="flex items-center gap-3">
-        <button id="menu-btn" aria-label="Menü öffnen" aria-expanded="false"
-          class="md:hidden flex flex-col gap-[5px] p-2 text-primary rounded-lg hover:bg-primary/5 transition-colors">
-          <span class="ham-line"></span>
-          <span class="ham-line"></span>
-          <span class="ham-line"></span>
+      <ul class="hidden md:flex items-center gap-8 text-sm font-semibold opacity-90 list-none m-0 p-0">
+        <li><a href="index.html" class="hover:text-accent transition-colors">Home</a></li>
+        <li><a href="beispiele.html" class="text-accent font-bold" aria-current="page">Beispiele</a></li>
+        <li><a href="preise.html" class="hover:text-accent transition-colors">Preise</a></li>
+        <li><a href="blog/" class="hover:text-accent transition-colors">Blog</a></li>
+      </ul>
+      <div class="flex items-center gap-2 md:gap-3">
+        <a href="tel:+491702783450" aria-label="Jetzt anrufen"
+          class="md:hidden flex items-center justify-center w-11 h-11 text-primary rounded-lg hover:bg-primary/5 transition-colors">
+          <i class="ph ph-phone text-xl"></i>
+        </a>
+        <button id="menu-btn" aria-label="Menü öffnen" aria-expanded="false" aria-controls="mobile-menu"
+          class="md:hidden flex flex-col justify-center items-center gap-[5px] w-11 h-11 text-primary rounded-lg hover:bg-primary/5 transition-colors">
+          <span class="ham-line"></span><span class="ham-line"></span><span class="ham-line"></span>
         </button>
-        <a href="index.html#kontakt"
-          class="text-sm font-semibold text-white bg-accent hover:bg-accent/80 px-5 py-2.5 rounded-md transition-all duration-300 inline-flex items-center">Kontakt</a>
+        <a href="index.html#calendly" class="hidden sm:inline-flex text-sm font-semibold text-white bg-accent hover:bg-accent/90 px-4 md:px-5 py-2.5 rounded-md transition-all items-center">
+          Gespräch buchen
+        </a>
       </div>
     </div>
   </nav>
 
   <!-- MOBILE MENU -->
-  <div id="mobile-menu" class="md:hidden fixed inset-x-0 top-[90px] z-40 bg-white/96 backdrop-blur-2xl border-b border-primary/8 shadow-2xl">
-    <div class="flex flex-col py-6 px-6 gap-1">
-      <a href="index.html" class="flex items-center justify-between py-3.5 px-4 rounded-xl text-base font-semibold text-primary hover:bg-primary/5 transition-colors">
-        Home <i class="ph ph-arrow-right text-sm text-primary/30"></i>
-      </a>
-      <a href="beispiele.html" class="flex items-center justify-between py-3.5 px-4 rounded-xl text-base font-bold text-accent bg-accent/5">
-        Beispiele <i class="ph ph-arrow-right text-sm"></i>
-      </a>
-      <a href="preise.html" class="flex items-center justify-between py-3.5 px-4 rounded-xl text-base font-semibold text-primary hover:bg-primary/5 transition-colors">
-        Preise & Rezensionen <i class="ph ph-arrow-right text-sm text-primary/30"></i>
-      </a>
-      <a href="index.html#kontakt" class="mt-3 w-full text-center bg-accent text-white font-semibold py-3.5 rounded-xl hover:bg-accent/85 transition-colors text-sm">
-        Kostenloses Beratungsgespräch
-      </a>
+  <div id="mobile-menu" class="md:hidden fixed inset-x-0 bottom-0 z-40 bg-white shadow-2xl overflow-y-auto" style="top: var(--nav-h);">
+    <div class="flex flex-col py-4 px-4 gap-1">
+      <a href="index.html" class="flex items-center justify-between py-3.5 px-4 rounded-xl text-base font-semibold text-primary hover:bg-primary/5 transition-colors">Home <i class="ph ph-arrow-right text-sm text-primary/30"></i></a>
+      <a href="beispiele.html" class="flex items-center justify-between py-3.5 px-4 rounded-xl text-base font-bold text-accent bg-accent/5">Beispiele <i class="ph ph-arrow-right text-sm"></i></a>
+      <a href="preise.html" class="flex items-center justify-between py-3.5 px-4 rounded-xl text-base font-semibold text-primary hover:bg-primary/5 transition-colors">Preise <i class="ph ph-arrow-right text-sm text-primary/30"></i></a>
+      <a href="blog/" class="flex items-center justify-between py-3.5 px-4 rounded-xl text-base font-semibold text-primary hover:bg-primary/5 transition-colors">Blog <i class="ph ph-arrow-right text-sm text-primary/30"></i></a>
+      <a href="index.html#calendly" class="mt-3 w-full text-center bg-accent text-white font-bold py-4 rounded-xl hover:bg-accent/85 transition-colors text-sm">Kostenloses Gespräch buchen</a>
     </div>
   </div>
 
-  <div class="pt-[90px]"></div>
+  <main id="main">
+
+  <!-- BREADCRUMB / HERO -->
+  <section class="px-4 md:px-6 pt-28 md:pt-32 pb-10 md:pb-14 bg-background border-b border-black/5">
+    <div class="max-w-5xl mx-auto">
+      <nav aria-label="Breadcrumb" class="text-xs text-primary/50 mb-5 flex items-center gap-1.5">
+        <a href="index.html" class="hover:text-accent">Start</a>
+        <i class="ph ph-caret-right text-[10px]"></i>
+        <span class="text-primary/80 font-medium">Beispiele</span>
+      </nav>
+      <p class="text-accent font-semibold text-xs tracking-[0.18em] mb-3 uppercase">Referenzprojekte</p>
+      <h1 class="text-3xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-primary leading-[1.1] mb-4 max-w-3xl">
+        Echte Projekte aus dem Isartal
+      </h1>
+      <p class="text-primary/60 text-base md:text-lg font-medium max-w-2xl leading-relaxed">
+        Hier sehen Sie, wie Websites von Webdesign Isar in der Praxis aussehen – mit Link zur Live-Seite.
+      </p>
+    </div>
+  </section>
 
   <!-- PORTFOLIO GRID -->
-  <section id="portfolio" class="py-24 px-6 bg-surface text-primary relative overflow-hidden w-full border-b border-black/5">
-    <div class="max-w-5xl mx-auto relative z-10">
-      <div class="reveal text-center mb-16 max-w-3xl mx-auto">
-        <p class="text-accent font-medium text-sm tracking-wide mb-3">Referenzprojekte</p>
-        <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary">Einblick in aktuelle Projekte</h2>
-      </div>
+  <section id="portfolio" class="py-16 md:py-20 px-4 md:px-6 bg-surface text-primary">
+    <div class="max-w-5xl mx-auto">
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
-      <div id="portfolio-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-        <a href="https://annikablendl.com/" target="_blank" rel="noopener noreferrer"
-          class="reveal group w-full flex flex-col relative rounded-[1.5rem] overflow-hidden border border-black/5 bg-white transition-all shadow-xl hover:-translate-y-2 hover:shadow-2xl duration-500">
-          <div class="w-full h-10 bg-white border-b border-black/5 flex items-center px-5 gap-2 shrink-0">
-            <div class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
-            <div class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
-            <div class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
+        <div class="reveal group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl">
+          <div class="h-10 bg-white border-b border-black/5 flex items-center px-5 gap-2 shrink-0">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></span>
           </div>
-          <div class="w-full aspect-[16/10] overflow-hidden bg-primary/5">
-            <img src="annikablendl.com.png" alt="Webdesign Referenz: Portfolio-Website für Schauspielerin und Regisseurin" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" draggable="false">
-          </div>
-          <div class="px-6 py-5 bg-white flex items-center justify-between">
-            <div>
-              <h3 class="text-lg font-bold text-primary">Cinematic Landingpage</h3>
-              <p class="text-sm text-primary/60">Portfolio für Regie & Schauspiel</p>
-            </div>
-            <i class="ph ph-arrow-up-right text-primary/30 text-xl group-hover:text-accent transition-colors duration-300"></i>
-          </div>
-        </a>
-
-        <a href="https://nachhilfe-icking.netlify.app/" target="_blank" rel="noopener noreferrer"
-          class="reveal group w-full flex flex-col relative rounded-[1.5rem] overflow-hidden border border-black/5 bg-white transition-all shadow-xl hover:-translate-y-2 hover:shadow-2xl duration-500">
-          <div class="w-full h-10 bg-white border-b border-black/5 flex items-center px-5 gap-2 shrink-0">
-            <div class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
-            <div class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
-            <div class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
-          </div>
-          <div class="w-full aspect-[16/10] overflow-hidden bg-primary/5">
-            <img src="nachhilfe-screenshot.png" alt="Webdesign Referenz: Lokale Landingpage für Nachhilfe-Anbieter im Isartal" class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700" draggable="false">
-          </div>
-          <div class="px-6 py-5 bg-white flex items-center justify-between">
-            <div>
-              <h3 class="text-lg font-bold text-primary">Lokale Landingpage</h3>
-              <p class="text-sm text-primary/60">Verkaufsstarke Seite zur Kundengewinnung</p>
-            </div>
-            <i class="ph ph-arrow-up-right text-primary/30 text-xl group-hover:text-accent transition-colors duration-300"></i>
-          </div>
-        </a>
-
-        <div class="reveal group w-full flex flex-col relative rounded-[1.5rem] overflow-hidden border border-black/5 bg-white shadow-xl">
-          <div class="w-full h-10 bg-white border-b border-black/5 flex items-center px-5 gap-2 shrink-0">
-            <div class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
-            <div class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
-            <div class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
-          </div>
-          <div class="w-full aspect-[16/10] overflow-hidden relative flex items-center justify-center"
-            style="background: linear-gradient(135deg, #502379 0%, #6B2C9A 50%, #502379 100%);">
-            <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(255,255,255,0.3) 0%, transparent 40%);"></div>
+          <div class="aspect-[16/10] overflow-hidden relative flex items-center justify-center" style="background: linear-gradient(135deg, #502379 0%, #6B2C9A 50%, #502379 100%);">
+            <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,.4) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(255,255,255,.3) 0%, transparent 40%);"></div>
             <div class="relative z-10 text-center px-6">
               <div class="text-white font-bold tracking-tight" style="font-size: clamp(2.5rem, 6vw, 4rem); letter-spacing: -0.04em;">Volt</div>
               <div class="text-white/80 font-medium text-sm tracking-[0.3em] uppercase mt-1">Berlin</div>
             </div>
-            <span class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm text-primary text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
+            <span class="absolute top-4 right-4 bg-white/95 text-primary text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
               <span class="w-1.5 h-1.5 rounded-full bg-[#f59e0b] animate-pulse"></span>
               In Entwicklung
             </span>
           </div>
-          <div class="px-6 py-5 bg-white flex items-center justify-between">
+          <div class="px-6 py-5 flex items-center justify-between">
             <div>
-              <h3 class="text-lg font-bold text-primary">Kampagnen-Website</h3>
-              <p class="text-sm text-primary/60">Politik / Non-Profit · Launch Sommer 2026</p>
+              <h2 class="text-lg font-bold text-primary">Kampagnen-Website</h2>
+              <p class="text-sm text-primary/60">Politik / Non-Profit · Sommer 2026</p>
             </div>
           </div>
         </div>
+
+        <a href="https://annikablendl.com/" target="_blank" rel="noopener noreferrer"
+          class="reveal group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
+          <div class="h-10 bg-white border-b border-black/5 flex items-center px-5 gap-2 shrink-0">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></span>
+          </div>
+          <div class="aspect-[16/10] overflow-hidden bg-primary/5">
+            <img src="annikablendl.com.png" alt="Webdesign-Referenz: Portfolio-Website für Schauspielerin und Regisseurin"
+              width="1920" height="958" loading="eager" fetchpriority="high" decoding="async"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="px-6 py-5 flex items-center justify-between">
+            <div>
+              <h2 class="text-lg font-bold text-primary">Cinematic Landingpage</h2>
+              <p class="text-sm text-primary/60">Portfolio · Regie &amp; Schauspiel</p>
+            </div>
+            <i class="ph ph-arrow-up-right text-primary/30 text-xl group-hover:text-accent transition-colors"></i>
+          </div>
+        </a>
+
+        <a href="https://nachhilfe-icking.netlify.app/" target="_blank" rel="noopener noreferrer"
+          class="reveal group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
+          <div class="h-10 bg-white border-b border-black/5 flex items-center px-5 gap-2 shrink-0">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></span>
+          </div>
+          <div class="aspect-[16/10] overflow-hidden bg-primary/5">
+            <img src="nachhilfe-screenshot.png" alt="Webdesign-Referenz: Lokale Landingpage für Nachhilfe-Anbieter im Isartal"
+              width="1903" height="951" loading="lazy" decoding="async"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="px-6 py-5 flex items-center justify-between">
+            <div>
+              <h2 class="text-lg font-bold text-primary">Lokale Landingpage</h2>
+              <p class="text-sm text-primary/60">Nachhilfe · Isartal</p>
+            </div>
+            <i class="ph ph-arrow-up-right text-primary/30 text-xl group-hover:text-accent transition-colors"></i>
+          </div>
+        </a>
       </div>
     </div>
   </section>
 
-  <!-- CURSOR WIDGET + TEXT -->
-  <section id="loesung" class="py-20 px-6 bg-surface">
+  <!-- SERVICE BLOCK -->
+  <section class="py-16 md:py-20 px-4 md:px-6 bg-surface">
     <div class="max-w-5xl mx-auto">
-      <div class="reveal flex flex-col md:flex-row items-center gap-10 bg-white rounded-[2rem] p-8 md:p-10 border border-primary/5 shadow-sm">
-
-        <!-- Cursor-Widget -->
-        <div class="shrink-0 w-full md:w-[260px]">
-          <div id="cursor-container"
-            class="h-[160px] w-full bg-surface border border-primary/8 rounded-2xl p-5 relative overflow-hidden flex flex-col items-center justify-center">
-            <div class="absolute top-3 left-4 flex items-center gap-2">
-              <i class="ph ph-clock text-primary/35 text-sm"></i>
-              <span class="text-primary/35 uppercase tracking-widest text-[10px] font-bold">Projekt-Status</span>
-            </div>
-            <div class="grid grid-cols-3 gap-2 w-full mt-4">
-              <div class="h-8 rounded-lg bg-surface border border-primary/5 flex items-center justify-center">
-                <div class="w-1/2 h-1.5 bg-primary/10 rounded-full"></div>
-              </div>
-              <div class="h-8 rounded-lg bg-surface border border-primary/5 flex items-center justify-center">
-                <div class="w-1/2 h-1.5 bg-primary/10 rounded-full"></div>
-              </div>
-              <div class="h-8 rounded-lg bg-surface border border-primary/5 flex items-center justify-center">
-                <div class="w-1/2 h-1.5 bg-primary/10 rounded-full"></div>
-              </div>
-              <div class="col-span-3 h-10 rounded-lg bg-accent/10 border border-accent/20 flex items-center justify-between px-3">
-                <span class="text-xs font-semibold text-accent">Live geschaltet ✓</span>
-                <i class="ph-fill ph-check-circle text-accent"></i>
-              </div>
-            </div>
-            <div id="animated-cursor" class="absolute top-1/2 left-1/4 z-10 w-6 h-6">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-primary drop-shadow-md bg-white rounded-full p-1">
-                <path d="m3 3 7.07 16.97 2.51-7.39 7.39-2.51L3 3z" />
-              </svg>
-            </div>
-          </div>
+      <div class="reveal flex flex-col md:flex-row items-start md:items-center gap-8 md:gap-10 bg-white rounded-3xl p-7 md:p-10 border border-primary/5 shadow-sm">
+        <div class="shrink-0 w-14 h-14 md:w-16 md:h-16 rounded-2xl bg-accent/10 text-accent flex items-center justify-center text-3xl">
+          <i class="ph-fill ph-shield-check"></i>
         </div>
-
-        <!-- Text -->
-        <div class="flex-1 flex flex-col gap-5">
-          <p class="text-accent font-bold text-xs tracking-widest uppercase">Rundum-Service</p>
-          <div class="flex items-start gap-3">
-            <i class="ph-fill ph-check-circle text-accent text-xl mt-0.5 shrink-0"></i>
-            <div>
-              <p class="font-bold text-sm text-primary">Ihre Seite läuft – ohne Zutun</p>
-              <p class="text-xs text-primary/55 font-medium mt-1">Ich hoste alles für Sie. Kein Technik-Stress, keine Server-Kosten.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <i class="ph-fill ph-check-circle text-accent text-xl mt-0.5 shrink-0"></i>
-            <div>
-              <p class="font-bold text-sm text-primary">Ihre Wunsch-Adresse, fertig eingerichtet</p>
-              <p class="text-xs text-primary/55 font-medium mt-1">Ich besorge Ihre Domain und schalte alles sauber auf.</p>
-            </div>
-          </div>
-          <div class="flex items-start gap-3">
-            <i class="ph-fill ph-check-circle text-accent text-xl mt-0.5 shrink-0"></i>
-            <div>
-              <p class="font-bold text-sm text-primary">Änderungen? Einfach kurz melden.</p>
-              <p class="text-xs text-primary/55 font-medium mt-1">Neue Öffnungszeiten, ein Foto tauschen – ich erledige das schnell.</p>
-            </div>
-          </div>
+        <div class="flex-1">
+          <h2 class="text-2xl md:text-3xl font-bold text-primary mb-3">Rundum-Service inklusive</h2>
+          <p class="text-primary/70 text-base font-medium mb-5 leading-relaxed">
+            Bei jedem Projekt übernehme ich Hosting-Setup, Domain-Einrichtung und kleine Änderungen im ersten Monat – damit Sie sich um Ihr Geschäft kümmern können, nicht um Server.
+          </p>
+          <ul class="grid sm:grid-cols-3 gap-3 list-none p-0">
+            <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-accent text-lg mt-0.5"></i><span class="text-sm font-medium text-primary/75">Hosting eingerichtet</span></li>
+            <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-accent text-lg mt-0.5"></i><span class="text-sm font-medium text-primary/75">Domain auf Ihren Namen</span></li>
+            <li class="flex items-start gap-2"><i class="ph-fill ph-check-circle text-accent text-lg mt-0.5"></i><span class="text-sm font-medium text-primary/75">Erste Änderungen frei</span></li>
+          </ul>
         </div>
       </div>
     </div>
   </section>
+
+  <!-- CTA -->
+  <section class="py-20 md:py-24 px-4 md:px-6 bg-primary text-white">
+    <div class="reveal max-w-3xl mx-auto text-center">
+      <h2 class="text-3xl md:text-4xl font-bold tracking-tight mb-4">Bereit für Ihr eigenes Projekt?</h2>
+      <p class="text-white/70 text-base md:text-lg font-medium mb-8 leading-relaxed">
+        Buchen Sie 20 Minuten unverbindlich – wir klären, was Ihre Website können muss.
+      </p>
+      <div class="flex flex-col sm:flex-row items-stretch sm:items-center justify-center gap-3">
+        <a href="index.html#calendly" class="rounded-full font-bold inline-flex items-center justify-center gap-2 px-7 py-4 text-sm bg-accent text-white hover:bg-accent/90 transition-all shadow-lg shadow-accent/30">
+          <i class="ph ph-calendar-check text-lg"></i>
+          Kostenloses Gespräch buchen
+        </a>
+        <a href="preise.html" class="rounded-full font-bold inline-flex items-center justify-center px-7 py-4 text-sm bg-white/10 backdrop-blur-md text-white border border-white/30 hover:bg-white/20 transition-all">
+          Pakete &amp; Preise ansehen
+        </a>
+      </div>
+    </div>
+  </section>
+
+  </main>
 
   <!-- FOOTER -->
-  <footer class="bg-primary w-full border-t border-black/10 pt-20 pb-10 px-6 text-white/80">
-    <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between gap-12 mb-16">
+  <footer class="bg-primary w-full border-t border-white/5 pt-16 pb-10 px-4 md:px-6 text-white/80">
+    <div class="max-w-5xl mx-auto flex flex-col md:flex-row justify-between gap-12 mb-12">
       <div class="max-w-sm">
         <div class="flex items-center gap-3 mb-4">
-          <svg viewBox="0 0 24 24" fill="none" class="h-10 w-auto" xmlns="http://www.w3.org/2000/svg">
+          <svg viewBox="0 0 24 24" fill="none" class="h-9 w-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
             <path d="M12 2C12 2 5 10 5 15C5 18.866 8.134 22 12 22C15.866 22 19 18.866 19 15C19 10 12 2 12 2Z" fill="currentColor" opacity="0.6" />
             <path d="M12 2C12 2 5 10 5 15C5 18.866 8.134 22 12 22V2Z" fill="currentColor" />
           </svg>
           <div class="font-bold text-xl tracking-tight text-white">Webdesign Isar</div>
         </div>
-        <p class="text-sm leading-relaxed text-white/60 mb-8">Moderne Websites für Unternehmen im Isartal und Umgebung.</p>
+        <p class="text-sm leading-relaxed text-white/60">Moderne Websites für Unternehmen im Isartal und Umgebung.</p>
       </div>
-      <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 w-full md:w-auto">
-        <div class="flex flex-col gap-4 text-sm font-medium text-[#9ca3af]">
-          <span class="text-white font-bold tracking-widest uppercase text-xs mb-1">Navigation</span>
+      <nav class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 w-full md:w-auto" aria-label="Footer-Navigation">
+        <div class="flex flex-col gap-3 text-sm font-medium text-white/55">
+          <span class="text-white font-bold tracking-widest uppercase text-[11px] mb-1">Navigation</span>
           <a href="index.html" class="hover:text-white transition-colors">Home</a>
           <a href="beispiele.html" class="hover:text-white transition-colors">Beispiele</a>
           <a href="preise.html" class="hover:text-white transition-colors">Preise</a>
-          <a href="index.html#kontakt" class="hover:text-white transition-colors">Kontakt</a>
+          <a href="blog/" class="hover:text-white transition-colors">Blog</a>
+          <a href="index.html#calendly" class="hover:text-white transition-colors">Kontakt</a>
         </div>
-        <div class="flex flex-col gap-4 text-sm font-medium text-[#9ca3af]">
-          <span class="text-white font-bold tracking-widest uppercase text-xs mb-1">Lokales SEO</span>
-          <span>Webdesign Wolfratshausen</span>
-          <span>Webdesign Geretsried</span>
-          <span>Webdesign Baierbrunn</span>
-          <span>Webdesign Icking</span>
-          <span>Webdesign München Süd</span>
+        <div class="flex flex-col gap-3 text-sm font-medium text-white/55">
+          <span class="text-white font-bold tracking-widest uppercase text-[11px] mb-1">Standorte</span>
+          <span>Wolfratshausen</span><span>Geretsried</span><span>Icking · Baierbrunn</span><span>München Süd</span><span>Bad Tölz</span>
         </div>
-        <div class="flex flex-col gap-4 text-sm font-medium text-[#9ca3af]">
-          <span class="text-white font-bold tracking-widest uppercase text-xs mb-1">Rechtliches</span>
+        <div class="flex flex-col gap-3 text-sm font-medium text-white/55">
+          <span class="text-white font-bold tracking-widest uppercase text-[11px] mb-1">Rechtliches</span>
           <a href="impressum.html" class="hover:text-white transition-colors">Impressum</a>
           <a href="datenschutz.html" class="hover:text-white transition-colors">Datenschutz</a>
         </div>
-      </div>
+      </nav>
     </div>
-    <div class="max-w-5xl mx-auto border-t border-white/10 pt-8 px-4 flex justify-between text-xs font-mono text-white/40">
-      <span>© 2026 Webdesign Isar.</span>
-      <span>München, DE</span>
+    <div class="max-w-5xl mx-auto border-t border-white/10 pt-6 flex flex-col sm:flex-row justify-between gap-2 text-xs font-mono text-white/40">
+      <span>© 2026 Webdesign Isar · Balthasar Beyer</span>
+      <span>Wolfratshausen · Bayern · DE</span>
     </div>
   </footer>
 
+  <!-- STICKY MOBILE CTA -->
+  <a href="index.html#calendly" id="sticky-cta" class="sticky-mobile-cta" aria-label="Kostenloses Gespräch buchen">
+    <i class="ph-fill ph-calendar-check text-lg"></i>
+    Gespräch buchen
+  </a>
+
   <script>
-    gsap.registerPlugin(ScrollTrigger);
-
-
-    // Scroll reveal
-    gsap.utils.toArray('.reveal').forEach((el) => {
-      gsap.fromTo(el,
-        { y: 36, opacity: 0 },
-        {
-          y: 0, opacity: 1, duration: 0.75, ease: 'power2.out',
-          scrollTrigger: { trigger: el, start: 'top 88%', once: true }
-        }
-      );
-    });
-
-    // Navbar scroll effect
-    ScrollTrigger.create({
-      start: "top -80", end: 99999,
-      toggleClass: { className: "nav-scrolled", targets: ".navbar" }
-    });
-
-    // Cursor animation
-    const animatedCursor = document.getElementById('animated-cursor');
-    if (animatedCursor) {
-      const tl = gsap.timeline({ repeat: -1, repeatDelay: 1 });
-      tl.to(animatedCursor, { x: 50, y: 50, duration: 1, ease: "power2.inOut" })
-        .to(animatedCursor, { scale: 0.8, duration: 0.1, yoyo: true, repeat: 1 })
-        .to(animatedCursor, { x: 120, y: 30, duration: 1, ease: "power2.inOut" }, "+=0.5")
-        .to(animatedCursor, { x: -20, y: -10, duration: 1, ease: "power2.inOut" }, "+=1");
-    }
-
-    // Mobile menu
-    const menuBtn = document.getElementById('menu-btn');
-    const mobileMenu = document.getElementById('mobile-menu');
-
-    menuBtn.addEventListener('click', () => {
-      const isOpen = menuBtn.classList.toggle('open');
-      mobileMenu.classList.toggle('open', isOpen);
-      menuBtn.setAttribute('aria-expanded', String(isOpen));
-    });
-
-    mobileMenu.querySelectorAll('a').forEach(link => {
-      link.addEventListener('click', () => {
-        menuBtn.classList.remove('open');
-        mobileMenu.classList.remove('open');
-        menuBtn.setAttribute('aria-expanded', 'false');
+    document.addEventListener('DOMContentLoaded', () => {
+      const menuBtn = document.getElementById('menu-btn');
+      const mobileMenu = document.getElementById('mobile-menu');
+      menuBtn?.addEventListener('click', () => {
+        const open = menuBtn.classList.toggle('open');
+        mobileMenu.classList.toggle('open', open);
+        menuBtn.setAttribute('aria-expanded', String(open));
       });
+      mobileMenu?.querySelectorAll('a').forEach(l => l.addEventListener('click', () => {
+        menuBtn.classList.remove('open'); mobileMenu.classList.remove('open');
+        menuBtn.setAttribute('aria-expanded','false');
+      }));
+      const sticky = document.getElementById('sticky-cta');
+      if (sticky) {
+        const onScroll = () => {
+          if (window.scrollY > window.innerHeight * 0.6) sticky.classList.add('visible');
+          else sticky.classList.remove('visible');
+        };
+        window.addEventListener('scroll', onScroll, { passive: true });
+        onScroll();
+      }
+    });
+
+    window.addEventListener('load', () => {
+      if (!window.gsap || !window.ScrollTrigger) return;
+      gsap.registerPlugin(ScrollTrigger);
+      gsap.utils.toArray('.reveal').forEach(el => {
+        gsap.fromTo(el,
+          { y: 36, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out',
+            scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
+      });
+      ScrollTrigger.create({ start: 'top -80', end: 99999, toggleClass: { className: 'nav-scrolled', targets: '.navbar' } });
     });
   </script>
 </body>
+
 </html>

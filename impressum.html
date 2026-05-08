@@ -2,103 +2,116 @@
 <html lang="de">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Impressum | Webdesign Isar</title>
-    <link rel="icon" href="favicon.svg" type="image/svg+xml">
-    <link rel="stylesheet" href="fonts/fonts.css">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        background: "#FAFAF9",
-                        primary: "#292524",
-                        accent: "#0071E3",
-                        surface: "#F5F5F4"
-                    },
-                    fontFamily: {
-                        sans: ['Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Impressum | Webdesign Isar</title>
+  <meta name="description" content="Impressum von Webdesign Isar – Balthasar Beyer, freiberuflicher Webdesigner.">
+  <link rel="canonical" href="https://webdesign-isar.de/impressum.html">
+  <meta name="robots" content="noindex, follow">
+  <meta name="theme-color" content="#0071E3">
+
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: { extend: {
+        colors: { background: "#FAFAF9", primary: "#292524", accent: "#0071E3", surface: "#F5F5F4" },
+        fontFamily: { sans: ['Inter','sans-serif'] }
+      }}
+    }
+  </script>
+  <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
 </head>
 
-<body class="bg-background text-primary antialiased font-sans">
-    <div class="max-w-3xl mx-auto py-24 px-6">
-        <a href="index.html" class="text-accent font-medium mb-8 inline-block hover:underline">&larr; Zurück zur
-            Startseite</a>
-        <h1 class="text-4xl font-bold mb-10">Impressum</h1>
+<body class="bg-background text-primary antialiased">
 
-        <div class="prose prose-sm max-w-none text-primary/80 space-y-8">
-
-            <div>
-                <p class="font-semibold text-primary mb-2">Angaben gemäß § 5 DDG (ehem. TMG):</p>
-                <p>
-                    Balthasar Beyer<br>
-                    Freiberuflicher Webdesigner<br>
-                    Auenstraße 57<br>
-                    99089 Erfurt<br>
-                    Deutschland
-                </p>
-            </div>
-
-            <div>
-                <p class="font-semibold text-primary mb-2">Kontakt:</p>
-                <p>
-                    Telefon: 0170 2783450<br>
-                    E-Mail: balthasar.beyer@gmail.com
-                </p>
-            </div>
-
-            <div>
-                <p class="font-semibold text-primary mb-2">Umsatzsteuer:</p>
-                <p>Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).</p>
-            </div>
-
-            <div>
-                <p class="font-semibold text-primary mb-2">Haftung für Inhalte:</p>
-                <p>
-                    Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den
-                    allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht
-                    verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen
-                    zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder
-                    Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt.
-                    Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten
-                    Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich diese
-                    Inhalte umgehend entfernen.
-                </p>
-            </div>
-
-            <div>
-                <p class="font-semibold text-primary mb-2">Haftung für Links:</p>
-                <p>
-                    Mein Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss
-                    habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der
-                    verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die
-                    verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft.
-                    Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente
-                    inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer
-                    Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige
-                    Links umgehend entfernen.
-                </p>
-            </div>
-
-            <div>
-                <p class="font-semibold text-primary mb-2">Urheberrecht:</p>
-                <p>
-                    Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem
-                    deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung
-                    außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen
-                    Autors bzw. Erstellers.
-                </p>
-            </div>
-
-        </div>
+  <!-- NAVBAR -->
+  <nav class="navbar fixed top-0 left-0 z-50 w-full bg-white text-primary drop-shadow-sm flex items-center" aria-label="Hauptnavigation">
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between px-4 md:px-6">
+      <a href="index.html" class="flex items-center gap-3" aria-label="Webdesign Isar – Startseite">
+        <svg viewBox="0 0 24 24" fill="none" class="h-8 md:h-9 w-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2C12 2 5 10 5 15C5 18.866 8.134 22 12 22C15.866 22 19 18.866 19 15C19 10 12 2 12 2Z" fill="#0071E3" />
+          <path d="M12 2C12 2 5 10 5 15C5 18.866 8.134 22 12 22V2Z" fill="currentColor" fill-opacity="0.9" />
+        </svg>
+        <span class="font-bold text-base md:text-lg tracking-tight">Webdesign Isar</span>
+      </a>
+      <a href="index.html" class="text-sm font-semibold text-primary/70 hover:text-accent transition-colors">
+        <i class="ph ph-arrow-left"></i> Zurück
+      </a>
     </div>
-</body>
+  </nav>
 
+  <main class="max-w-3xl mx-auto pt-32 md:pt-40 pb-20 px-4 md:px-6">
+    <p class="text-accent font-semibold text-xs tracking-[0.18em] mb-3 uppercase">Rechtliches</p>
+    <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-10">Impressum</h1>
+
+    <div class="space-y-8 text-primary/80 leading-relaxed">
+
+      <section>
+        <h2 class="text-lg font-bold text-primary mb-2">Angaben gemäß § 5 DDG (ehem. TMG)</h2>
+        <p>
+          Balthasar Beyer<br>
+          Freiberuflicher Webdesigner<br>
+          Auenstraße 57<br>
+          99089 Erfurt<br>
+          Deutschland
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-bold text-primary mb-2">Kontakt</h2>
+        <p>
+          Telefon: 0170 2783450<br>
+          E-Mail: balthasar.beyer@gmail.com
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-bold text-primary mb-2">Umsatzsteuer</h2>
+        <p>Gemäß § 19 UStG wird keine Umsatzsteuer berechnet (Kleinunternehmerregelung).</p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-bold text-primary mb-2">Haftung für Inhalte</h2>
+        <p>
+          Als Diensteanbieter bin ich gemäß § 7 Abs. 1 DDG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 DDG bin ich als Diensteanbieter jedoch nicht verpflichtet, übermittelte oder gespeicherte fremde Informationen zu überwachen oder nach Umständen zu forschen, die auf eine rechtswidrige Tätigkeit hinweisen. Verpflichtungen zur Entfernung oder Sperrung der Nutzung von Informationen nach den allgemeinen Gesetzen bleiben hiervon unberührt. Eine diesbezügliche Haftung ist jedoch erst ab dem Zeitpunkt der Kenntnis einer konkreten Rechtsverletzung möglich. Bei Bekanntwerden von entsprechenden Rechtsverletzungen werde ich diese Inhalte umgehend entfernen.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-bold text-primary mb-2">Haftung für Links</h2>
+        <p>
+          Mein Angebot enthält Links zu externen Websites Dritter, auf deren Inhalte ich keinen Einfluss habe. Deshalb kann ich für diese fremden Inhalte auch keine Gewähr übernehmen. Für die Inhalte der verlinkten Seiten ist stets der jeweilige Anbieter oder Betreiber der Seiten verantwortlich. Die verlinkten Seiten wurden zum Zeitpunkt der Verlinkung auf mögliche Rechtsverstöße überprüft. Rechtswidrige Inhalte waren zum Zeitpunkt der Verlinkung nicht erkennbar. Eine permanente inhaltliche Kontrolle der verlinkten Seiten ist jedoch ohne konkrete Anhaltspunkte einer Rechtsverletzung nicht zumutbar. Bei Bekanntwerden von Rechtsverletzungen werde ich derartige Links umgehend entfernen.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-lg font-bold text-primary mb-2">Urheberrecht</h2>
+        <p>
+          Die durch den Seitenbetreiber erstellten Inhalte und Werke auf diesen Seiten unterliegen dem deutschen Urheberrecht. Die Vervielfältigung, Bearbeitung, Verbreitung und jede Art der Verwertung außerhalb der Grenzen des Urheberrechtes bedürfen der schriftlichen Zustimmung des jeweiligen Autors bzw. Erstellers.
+        </p>
+      </section>
+
+    </div>
+
+    <div class="mt-12 pt-8 border-t border-black/10 text-sm text-primary/50">
+      <a href="index.html" class="text-accent hover:underline font-medium">&larr; Zurück zur Startseite</a>
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="bg-primary w-full pt-12 pb-8 px-4 md:px-6 text-white/80 mt-12">
+    <div class="max-w-5xl mx-auto flex flex-col sm:flex-row justify-between gap-4 text-xs font-mono text-white/40">
+      <span>© 2026 Webdesign Isar · Balthasar Beyer</span>
+      <div class="flex gap-4">
+        <a href="impressum.html" class="hover:text-white">Impressum</a>
+        <a href="datenschutz.html" class="hover:text-white">Datenschutz</a>
+      </div>
+    </div>
+  </footer>
+
+</body>
 </html>

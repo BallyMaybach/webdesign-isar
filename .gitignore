@@ -8,3 +8,39 @@ profile-pic.jpg
 # Temp files
 testfile.txt
 UsersBallyAppDataLocalTempwp-theme-buildwebdesign-isarassets/
+
+# Screenshots & test artifacts
+*.jpeg
+snap_*.yml
+verify_*.jpeg
+verify-*.png
+beispiele_full.jpeg
+calendly.jpeg
+datenschutz.jpeg
+faq.jpeg
+impressum.jpeg
+index_mobile_full.jpeg
+index_mobile_top.png
+menu_open.jpeg
+portfolio.jpeg
+preise_full.jpeg
+preise_section.jpeg
+prozess.jpeg
+stimmen.jpeg
+verify_calendly.jpeg
+verify_calendly2.jpeg
+verify_full.jpeg
+verify_menu.jpeg
+verify_mid.jpeg
+verify_testimonials.jpeg
+verify-after-refresh.png
+verify-final-mobile.png
+verify-hero.png
+
+# Claude & Playwright tooling
+.claude/
+.mcp.json
+.playwright-mcp/
+
+# Audio
+*.mp3

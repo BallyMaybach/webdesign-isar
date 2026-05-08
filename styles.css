@@ -1,0 +1,269 @@
+/* ============================================================
+   Webdesign Isar — Global Stylesheet
+   Mobile-first. Tailwind CDN handles utility classes.
+   This file holds only what Tailwind cannot express inline.
+============================================================ */
+
+:root {
+  --color-bg: #FAFAF9;
+  --color-primary: #292524;
+  --color-accent: #0071E3;
+  --color-card: #FFFFFF;
+  --color-surface: #F5F5F4;
+  --nav-h: 72px;
+  background-color: var(--color-bg);
+  color: var(--color-primary);
+}
+
+@media (min-width: 768px) {
+  :root { --nav-h: 90px; }
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: calc(var(--nav-h) + 12px);
+  -webkit-text-size-adjust: 100%;
+  overflow-x: clip;
+}
+
+body {
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: var(--color-bg);
+  text-rendering: optimizeLegibility;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- Typo helpers ---------- */
+.text-drama     { font-family: 'DM Serif Display', Georgia, serif; }
+.text-mono-data { font-family: 'Space Mono', ui-monospace, monospace; }
+
+/* ---------- Touch targets ---------- */
+/* :where() keeps specificity at 0 so Tailwind utilities (flex/grid/block) on
+   card-wrapping links still win — only plain text links pick this up. */
+:where(a:not(.no-min):not(.inline-link), button:not(.no-min), summary, [role="button"]) {
+  min-height: 44px;
+  display: inline-flex;
+  align-items: center;
+}
+.no-min, .inline-link { min-height: 0; }
+
+/* ---------- Navbar ---------- */
+.navbar { height: var(--nav-h); }
+.nav-scrolled {
+  background-color: rgba(255, 255, 255, 0.92) !important;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border-bottom: 1px solid rgba(29, 29, 31, 0.07);
+  box-shadow: 0 2px 24px rgba(0, 0, 0, 0.07);
+}
+
+/* ---------- Hamburger ---------- */
+.ham-line {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background-color: currentColor;
+  border-radius: 2px;
+  transition: transform .25s ease, opacity .2s ease;
+  transform-origin: center;
+}
+#menu-btn.open .ham-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+#menu-btn.open .ham-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+#menu-btn.open .ham-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ---------- Mobile menu slide ---------- */
+#mobile-menu {
+  transform: translateY(-12px);
+  opacity: 0;
+  pointer-events: none;
+  transition: transform .28s cubic-bezier(.4,0,.2,1), opacity .28s ease;
+}
+#mobile-menu.open {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* ---------- Buttons ---------- */
+.magnetic-btn { transition: transform .3s cubic-bezier(.25,.46,.45,.94); }
+.magnetic-btn:hover { transform: scale(1.03); }
+.btn-primary {
+  background-color: var(--color-accent);
+  color: #fff;
+  box-shadow: 0 8px 24px -8px rgba(0,113,227,.45);
+}
+.btn-primary:hover { background-color: #0061c4; }
+
+/* ---------- Sticky mobile CTA ---------- */
+.sticky-mobile-cta {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 60;
+  background: var(--color-accent);
+  color: #fff;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 14px;
+  box-shadow: 0 10px 30px -8px rgba(0,113,227,.55), 0 4px 12px rgba(0,0,0,.18);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: transform .35s cubic-bezier(.4,0,.2,1), opacity .35s ease;
+}
+.sticky-mobile-cta.visible { transform: translateY(0); opacity: 1; }
+.sticky-mobile-cta:active { transform: scale(.97); }
+@media (min-width: 1024px) {
+  .sticky-mobile-cta { display: none; }
+}
+
+/* ---------- Reveal animations ---------- */
+.reveal {
+  opacity: 0;
+  transform: translateY(36px);
+}
+.prozess-step {
+  opacity: 0;
+  transform: translateY(20px);
+}
+
+/* ---------- FAQ details/summary ---------- */
+summary { list-style: none; cursor: pointer; }
+summary::-webkit-details-marker { display: none; }
+details[open] summary .faq-toggle { transform: rotate(45deg); }
+.faq-toggle { transition: transform .3s ease; }
+
+/* ---------- Vertical timeline (mobile-first) ---------- */
+.timeline {
+  position: relative;
+  padding-left: 56px;
+}
+.timeline::before {
+  content: "";
+  position: absolute;
+  left: 27px;
+  top: 14px;
+  bottom: 14px;
+  width: 2px;
+  background: linear-gradient(to bottom,
+    rgba(0,113,227,.15) 0%,
+    rgba(0,113,227,.55) 50%,
+    rgba(0,113,227,.15) 100%);
+  border-radius: 2px;
+}
+.timeline-step { position: relative; padding-bottom: 32px; }
+.timeline-step:last-child { padding-bottom: 0; }
+.timeline-step .step-dot {
+  position: absolute;
+  left: -42px;
+  top: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: var(--color-accent);
+  color: #fff;
+  font-weight: 700;
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 0 4px #fff, 0 0 0 5px rgba(0,113,227,.18);
+  z-index: 1;
+}
+
+/* Desktop: horizontal timeline */
+@media (min-width: 1024px) {
+  .timeline {
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 16px;
+  }
+  .timeline::before {
+    left: 7%;
+    right: 7%;
+    top: 14px;
+    bottom: auto;
+    width: auto;
+    height: 2px;
+    background: linear-gradient(to right,
+      transparent 0%,
+      rgba(0,113,227,.35) 15%,
+      rgba(0,113,227,.35) 85%,
+      transparent 100%);
+  }
+  .timeline-step {
+    padding-bottom: 0;
+    text-align: center;
+    padding: 0 8px;
+  }
+  .timeline-step .step-dot {
+    position: relative;
+    left: 0;
+    margin: 0 auto 16px;
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+}
+
+/* ---------- Browser mockup (hero) ---------- */
+.browser-mockup {
+  border-radius: 16px;
+  overflow: hidden;
+  background: #fff;
+  box-shadow:
+    0 30px 60px -20px rgba(0,0,0,.45),
+    0 18px 36px -18px rgba(0,0,0,.35);
+  border: 1px solid rgba(255,255,255,.08);
+}
+.browser-mockup-bar {
+  height: 32px;
+  background: #f3f4f6;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 6px;
+  border-bottom: 1px solid rgba(0,0,0,.06);
+}
+.browser-mockup-bar span {
+  width: 10px; height: 10px; border-radius: 50%;
+}
+.browser-mockup img { display: block; width: 100%; height: auto; }
+
+/* ---------- Hero overlay ---------- */
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(180deg, rgba(0,0,0,.45) 0%, rgba(0,0,0,.65) 100%),
+    radial-gradient(circle at 30% 30%, rgba(0,113,227,.15), transparent 60%);
+  z-index: 1;
+}
+
+/* ---------- Selection ---------- */
+::selection { background: rgba(0,113,227,.18); color: var(--color-primary); }
+
+/* ---------- Forms ---------- */
+input, textarea {
+  font-family: inherit;
+  font-size: 16px; /* prevents iOS zoom */
+}
+
+/* ---------- Print ---------- */
+@media print {
+  .navbar, #mobile-menu, .sticky-mobile-cta, footer { display: none !important; }
+  body { color: #000; background: #fff; }
+}

@@ -4,20 +4,58 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webdesign Kosten & Preise | Website erstellen lassen ab 500 € – Wolfratshausen</title>
-  <meta name="description" content="Was kostet eine Website? Transparente Preise für Webdesign in Wolfratshausen und München. Professionelle Landingpage ab 500 € – inkl. mobiloptimiertem Design und SEO.">
+  <title>Webdesign Preise | 3 Pakete ab 500 € – Wolfratshausen & Isartal</title>
+  <meta name="description" content="Transparente Festpreise für Webdesign im Isartal. Landingpage 500 €, Multi-Page 1.200 €, Custom-Projekt ab 1.800 €. Klare Pakete ohne versteckte Kosten.">
   <link rel="canonical" href="https://webdesign-isar.de/preise.html">
 
   <!-- Open Graph -->
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://webdesign-isar.de/preise.html">
-  <meta property="og:title" content="Webdesign Kosten & Preise | Website ab 500 € – Wolfratshausen">
-  <meta property="og:description" content="Transparente Preise für professionelles Webdesign im Isartal. Landingpage ab 500 €, mobiloptimiert und Google-optimiert.">
+  <meta property="og:title" content="Webdesign Preise | 3 Pakete ab 500 € – Wolfratshausen & Isartal">
+  <meta property="og:description" content="Transparente Festpreise für Webdesign im Isartal: Landingpage 500 €, Multi-Page 1.200 €, Custom-Projekt ab 1.800 €.">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <link rel="stylesheet" href="fonts/fonts.css">
+
+  <!-- Schema.org Service Offers -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "OfferCatalog",
+    "name": "Webdesign-Pakete – Webdesign Isar",
+    "itemListElement": [
+      {
+        "@type": "Offer",
+        "name": "Landingpage (Basic)",
+        "description": "One-Pager mit modernem Design, mobil-optimiert, Kontaktformular, lokales SEO, Hosting-Setup. Lieferzeit 7-10 Tage.",
+        "price": "500",
+        "priceCurrency": "EUR",
+        "category": "Webdesign",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Multi-Page Website (Standard)",
+        "description": "Bis zu 5 Unterseiten, erweitertes SEO, Bildergalerie, Google Maps, 2 Feedback-Runden. Lieferzeit 2-3 Wochen.",
+        "price": "1200",
+        "priceCurrency": "EUR",
+        "category": "Webdesign",
+        "availability": "https://schema.org/InStock"
+      },
+      {
+        "@type": "Offer",
+        "name": "Custom Projekt (Premium)",
+        "description": "Individuelle Seitenanzahl, Custom Funktionen wie Buchungssystem oder Shop, Premium-Design mit Animationen, erweiterte SEO-Optimierung.",
+        "price": "1800",
+        "priceCurrency": "EUR",
+        "category": "Webdesign",
+        "availability": "https://schema.org/InStock"
+      }
+    ]
+  }
+  </script>
 
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
@@ -46,45 +84,18 @@
   <script src="https://unpkg.com/@phosphor-icons/web"></script>
 
   <style>
-    :root {
-      background-color: #FAFAF9;
-      color: #292524;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
-
+    :root { background-color: #FAFAF9; color: #292524; }
+    html { scroll-behavior: smooth; }
     body {
       overflow-x: hidden;
       font-family: 'Inter', sans-serif;
       -webkit-font-smoothing: antialiased;
       background-color: #FAFAF9;
     }
-
-    .text-drama {
-      font-family: 'DM Serif Display', serif;
-    }
-
-    .text-mono-data {
-      font-family: 'Space Mono', monospace;
-    }
-
-    .magnetic-btn {
-      transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    .magnetic-btn:hover {
-      transform: scale(1.03);
-    }
-
-    .btn-layer {
-      transition: transform 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    }
-
-    .magnetic-btn:hover .btn-layer {
-      transform: translateX(0);
-    }
+    .text-drama { font-family: 'DM Serif Display', serif; }
+    .text-mono-data { font-family: 'Space Mono', monospace; }
+    .magnetic-btn { transition: transform 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); }
+    .magnetic-btn:hover { transform: scale(1.03); }
 
     .nav-scrolled {
       background-color: rgba(255, 255, 255, 0.92) !important;
@@ -94,32 +105,16 @@
     }
 
     .ham-line {
-      display: block;
-      width: 22px;
-      height: 2px;
-      background-color: currentColor;
-      border-radius: 2px;
+      display: block; width: 22px; height: 2px;
+      background-color: currentColor; border-radius: 2px;
       transition: transform 0.25s ease, opacity 0.2s ease;
       transform-origin: center;
     }
+    #menu-btn.open .ham-line:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    #menu-btn.open .ham-line:nth-child(2) { opacity: 0; transform: scaleX(0); }
+    #menu-btn.open .ham-line:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
 
-    #menu-btn.open .ham-line:nth-child(1) {
-      transform: translateY(7px) rotate(45deg);
-    }
-
-    #menu-btn.open .ham-line:nth-child(2) {
-      opacity: 0;
-      transform: scaleX(0);
-    }
-
-    #menu-btn.open .ham-line:nth-child(3) {
-      transform: translateY(-7px) rotate(-45deg);
-    }
-
-    .reveal {
-      opacity: 0;
-      transform: translateY(36px);
-    }
+    .reveal { opacity: 0; transform: translateY(36px); }
 
     #mobile-menu {
       transform: translateY(-12px);
@@ -127,26 +122,22 @@
       pointer-events: none;
       transition: transform 0.28s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.28s ease;
     }
-
     #mobile-menu.open {
       transform: translateY(0);
       opacity: 1;
       pointer-events: auto;
     }
-
   </style>
 </head>
 
 <body class="w-full relative selection:bg-accent/20 selection:text-primary">
 
   <!-- NAVBAR -->
-  <nav
-    class="navbar fixed top-0 left-0 z-50 w-full h-[90px] transition-all duration-500 bg-white text-primary drop-shadow-sm flex items-center">
+  <nav class="navbar fixed top-0 left-0 z-50 w-full h-[90px] transition-all duration-500 bg-white text-primary drop-shadow-sm flex items-center">
     <div class="max-w-7xl mx-auto w-full flex items-center justify-between px-6">
       <a href="index.html" class="flex items-center gap-3">
         <svg viewBox="0 0 24 24" fill="none" class="h-9 w-auto" xmlns="http://www.w3.org/2000/svg">
-          <path d="M12 2C12 2 5 10 5 15C5 18.866 8.134 22 12 22C15.866 22 19 18.866 19 15C19 10 12 2 12 2Z"
-            fill="#0071E3" />
+          <path d="M12 2C12 2 5 10 5 15C5 18.866 8.134 22 12 22C15.866 22 19 18.866 19 15C19 10 12 2 12 2Z" fill="#0071E3" />
           <path d="M12 2C12 2 5 10 5 15C5 18.866 8.134 22 12 22V2Z" fill="currentColor" fill-opacity="0.9" />
         </svg>
         <span class="font-bold text-lg tracking-tight hidden sm:block">Webdesign Isar</span>
@@ -154,10 +145,8 @@
 
       <div class="hidden md:flex items-center gap-8 text-sm font-semibold opacity-90">
         <a href="index.html" class="hover:text-accent transition-colors hover:-translate-y-px transform block">Home</a>
-        <a href="beispiele.html"
-          class="hover:text-accent transition-colors hover:-translate-y-px transform block">Beispiele</a>
-        <a href="preise.html" class="text-accent font-bold hover:-translate-y-px transform transition-all block">Preise
-          & Rezensionen</a>
+        <a href="beispiele.html" class="hover:text-accent transition-colors hover:-translate-y-px transform block">Beispiele</a>
+        <a href="preise.html" class="text-accent font-bold hover:-translate-y-px transform transition-all block">Preise & Rezensionen</a>
       </div>
 
       <div class="flex items-center gap-3">
@@ -167,30 +156,24 @@
           <span class="ham-line"></span>
           <span class="ham-line"></span>
         </button>
-        <a href="index.html#kontakt"
-          class="text-sm font-semibold text-white bg-accent hover:bg-accent/80 px-5 py-2.5 rounded-md transition-all duration-300 inline-flex items-center">Kontakt</a>
+        <a href="index.html#kontakt" class="text-sm font-semibold text-white bg-accent hover:bg-accent/80 px-5 py-2.5 rounded-md transition-all duration-300 inline-flex items-center">Kontakt</a>
       </div>
     </div>
   </nav>
 
   <!-- MOBILE MENU -->
-  <div id="mobile-menu"
-    class="md:hidden fixed inset-x-0 top-[90px] z-40 bg-white/96 backdrop-blur-2xl border-b border-primary/8 shadow-2xl">
+  <div id="mobile-menu" class="md:hidden fixed inset-x-0 top-[90px] z-40 bg-white/96 backdrop-blur-2xl border-b border-primary/8 shadow-2xl">
     <div class="flex flex-col py-6 px-6 gap-1">
-      <a href="index.html"
-        class="flex items-center justify-between py-3.5 px-4 rounded-xl text-base font-semibold text-primary hover:bg-primary/5 transition-colors">
+      <a href="index.html" class="flex items-center justify-between py-3.5 px-4 rounded-xl text-base font-semibold text-primary hover:bg-primary/5 transition-colors">
         Home <i class="ph ph-arrow-right text-sm text-primary/30"></i>
       </a>
-      <a href="beispiele.html"
-        class="flex items-center justify-between py-3.5 px-4 rounded-xl text-base font-semibold text-primary hover:bg-primary/5 transition-colors">
+      <a href="beispiele.html" class="flex items-center justify-between py-3.5 px-4 rounded-xl text-base font-semibold text-primary hover:bg-primary/5 transition-colors">
         Beispiele <i class="ph ph-arrow-right text-sm text-primary/30"></i>
       </a>
-      <a href="preise.html"
-        class="flex items-center justify-between py-3.5 px-4 rounded-xl text-base font-bold text-accent bg-accent/5">
+      <a href="preise.html" class="flex items-center justify-between py-3.5 px-4 rounded-xl text-base font-bold text-accent bg-accent/5">
         Preise & Rezensionen <i class="ph ph-arrow-right text-sm"></i>
       </a>
-      <a href="index.html#kontakt"
-        class="mt-3 w-full text-center bg-accent text-white font-semibold py-3.5 rounded-xl hover:bg-accent/85 transition-colors text-sm">
+      <a href="index.html#kontakt" class="mt-3 w-full text-center bg-accent text-white font-semibold py-3.5 rounded-xl hover:bg-accent/85 transition-colors text-sm">
         Kostenloses Beratungsgespräch
       </a>
     </div>
@@ -202,46 +185,84 @@
   <section class="py-24 px-6 bg-surface text-center border-b border-black/5">
     <div class="max-w-3xl mx-auto">
       <p class="reveal text-accent font-medium text-sm tracking-wide mb-3">Transparent & fair</p>
-      <h1
-        class="reveal text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-primary leading-[1.1] mb-6">
-        Was kostet eine<br class="hidden sm:block"> professionelle Website?
+      <h1 class="reveal text-4xl md:text-5xl lg:text-[3.25rem] font-bold tracking-tight text-primary leading-[1.1] mb-6">
+        Drei Pakete.<br class="hidden sm:block"> Klare Festpreise.
       </h1>
-      <p class="reveal text-primary/60 text-lg font-medium max-w-lg mx-auto leading-relaxed">
-        Kein Kleingedrucktes. Ein klares Paket – das wirklich liefert.
+      <p class="reveal text-primary/60 text-lg font-medium max-w-xl mx-auto leading-relaxed">
+        Sie wissen vorher, was Sie bekommen – und was es kostet. Kein Stundenchaos, keine versteckten Posten.
       </p>
     </div>
   </section>
 
   <!-- PREISE -->
   <section id="preise" class="py-24 px-6 bg-background text-primary">
-    <div class="max-w-5xl mx-auto">
-      <div class="reveal max-w-md mx-auto">
-        <div class="bg-white rounded-[2rem] p-8 md:p-10 border border-black/5 shadow-2xl relative flex flex-col">
-          <div
-            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white px-5 py-1.5 text-sm font-semibold rounded-full whitespace-nowrap shadow-md">
-            Komplettpaket</div>
-          <h3 class="text-3xl font-bold mb-3 text-center">Landingpage</h3>
-          <p class="text-sm text-primary/60 mb-8 font-medium leading-relaxed text-center">Eine Website, die ganz auf
-            Ihre Bedürfnisse zugeschnitten ist.</p>
-          <div class="text-center mb-8">
-            <div class="text-5xl font-bold text-primary mb-2">ab 500 €</div>
-            <p class="text-sm text-primary/50 font-medium">Preis variiert nach Projekt</p>
+    <div class="max-w-6xl mx-auto">
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        <!-- BASIC -->
+        <div class="reveal bg-white rounded-[2rem] p-8 border border-black/5 shadow-xl flex flex-col">
+          <h3 class="text-2xl font-bold mb-1.5">Landingpage</h3>
+          <p class="text-sm text-primary/55 mb-6 font-medium">Perfekt für lokale Unternehmen</p>
+          <div class="mb-6">
+            <div class="text-4xl font-bold text-primary">500 €</div>
+            <p class="text-xs text-primary/50 font-medium mt-1">Festpreis · einmalig</p>
           </div>
-          <ul class="space-y-4 text-sm font-medium text-primary/80 mb-8 flex-1 max-w-sm mx-auto w-full">
-            <li class="flex gap-3 items-center"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0"></i>
-              modernes Design</li>
-            <li class="flex gap-3 items-center"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0"></i>
-              mobiloptimiert</li>
-            <li class="flex gap-3 items-center"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0"></i>
-              schnelle Ladezeit</li>
-            <li class="flex gap-3 items-center"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0"></i>
-              Google optimiert</li>
-            <li class="flex gap-3 items-center"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0"></i>
-              Kontaktformular für Anfragen</li>
+          <ul class="space-y-3 text-sm font-medium text-primary/80 mb-8 flex-1">
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>1 Seite (One-Pager)</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Modernes, individuelles Design</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Mobil-optimiert</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Kontaktformular</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Google-optimiert (lokales SEO)</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Hosting-Setup inklusive</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph ph-clock text-primary/40 text-lg shrink-0 mt-px"></i><span class="text-primary/60">Lieferzeit: 7-10 Tage</span></li>
           </ul>
-          <a href="index.html#kontakt"
-            class="group relative overflow-hidden rounded-full font-bold magnetic-btn w-full inline-flex items-center justify-center px-8 py-4 text-sm bg-accent text-white border border-accent hover:bg-accent/90 transition-all">
-            <span class="relative z-10">Jetzt anfragen</span>
+          <a href="index.html#kontakt" class="group rounded-full font-bold magnetic-btn w-full inline-flex items-center justify-center px-6 py-3.5 text-sm bg-primary text-white hover:bg-primary/90 transition-all">
+            Jetzt anfragen
+          </a>
+        </div>
+
+        <!-- STANDARD -->
+        <div class="reveal bg-white rounded-[2rem] p-8 border-2 border-accent shadow-2xl shadow-accent/10 flex flex-col relative md:-translate-y-2">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white px-5 py-1.5 text-xs font-bold uppercase tracking-wider rounded-full whitespace-nowrap shadow-lg">
+            Beliebteste Wahl
+          </div>
+          <h3 class="text-2xl font-bold mb-1.5">Multi-Page Website</h3>
+          <p class="text-sm text-primary/55 mb-6 font-medium">Für Unternehmen mit mehreren Leistungen</p>
+          <div class="mb-6">
+            <div class="text-4xl font-bold text-primary">1.200 €</div>
+            <p class="text-xs text-primary/50 font-medium mt-1">Festpreis · einmalig</p>
+          </div>
+          <ul class="space-y-3 text-sm font-medium text-primary/80 mb-8 flex-1">
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Bis zu 5 Unterseiten</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span class="font-semibold">Alles aus Basic</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Erweitertes SEO</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Bildergalerie</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Google Maps Integration</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>2 Feedback-Runden</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph ph-clock text-primary/40 text-lg shrink-0 mt-px"></i><span class="text-primary/60">Lieferzeit: 2-3 Wochen</span></li>
+          </ul>
+          <a href="index.html#kontakt" class="group rounded-full font-bold magnetic-btn w-full inline-flex items-center justify-center px-6 py-3.5 text-sm bg-accent text-white hover:bg-accent/90 transition-all shadow-lg shadow-accent/30">
+            Jetzt anfragen
+          </a>
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="reveal bg-white rounded-[2rem] p-8 border border-black/5 shadow-xl flex flex-col">
+          <h3 class="text-2xl font-bold mb-1.5">Custom Projekt</h3>
+          <p class="text-sm text-primary/55 mb-6 font-medium">Maßgeschneidert für komplexe Anforderungen</p>
+          <div class="mb-6">
+            <div class="text-4xl font-bold text-primary">ab 1.800 €</div>
+            <p class="text-xs text-primary/50 font-medium mt-1">Individuelles Angebot</p>
+          </div>
+          <ul class="space-y-3 text-sm font-medium text-primary/80 mb-8 flex-1">
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Individuelle Seitenanzahl</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Custom Funktionen (Buchungssystem, Shop, etc.)</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Premium-Design mit Animationen</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Erweiterte SEO-Optimierung</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Persönliche Betreuung</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph ph-clock text-primary/40 text-lg shrink-0 mt-px"></i><span class="text-primary/60">Lieferzeit: nach Absprache</span></li>
+          </ul>
+          <a href="index.html#kontakt" class="group rounded-full font-bold magnetic-btn w-full inline-flex items-center justify-center px-6 py-3.5 text-sm bg-primary text-white hover:bg-primary/90 transition-all">
+            Beratung vereinbaren
           </a>
         </div>
       </div>
@@ -250,63 +271,20 @@
 
   <!-- REZENSIONEN -->
   <section id="rezensionen" class="py-24 px-6 bg-surface text-primary border-t border-black/5">
-    <div class="max-w-5xl mx-auto">
-      <div class="reveal text-center mb-16">
+    <div class="max-w-3xl mx-auto text-center">
+      <div class="reveal mb-12">
         <p class="text-accent font-medium text-sm tracking-wide mb-3">Erfahrungen</p>
         <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary">Was Kunden sagen</h2>
       </div>
 
-      <div class="grid md:grid-cols-3 gap-6">
-        <div
-          class="reveal bg-white shadow-xl rounded-[2rem] p-8 border border-primary/5 flex flex-col gap-5 relative overflow-hidden">
-          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent/40 to-accent/10 rounded-t-[2rem]">
-          </div>
-          <div class="flex gap-0.5 text-[#f59e0b] text-base">★★★★★</div>
-          <p class="text-primary/70 font-medium text-[15px] leading-relaxed flex-1 italic">"..."</p>
-          <div class="pt-4 border-t border-primary/8 flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-primary/8 flex items-center justify-center shrink-0">
-              <i class="ph ph-user text-primary/40 text-sm"></i>
-            </div>
-            <div>
-              <p class="font-bold text-sm text-primary">...</p>
-              <p class="text-xs text-primary/40 uppercase tracking-widest mt-0.5">...</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="reveal bg-white shadow-xl rounded-[2rem] p-8 border border-primary/5 flex flex-col gap-5 relative overflow-hidden">
-          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent/40 to-accent/10 rounded-t-[2rem]">
-          </div>
-          <div class="flex gap-0.5 text-[#f59e0b] text-base">★★★★★</div>
-          <p class="text-primary/70 font-medium text-[15px] leading-relaxed flex-1 italic">"..."</p>
-          <div class="pt-4 border-t border-primary/8 flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-primary/8 flex items-center justify-center shrink-0">
-              <i class="ph ph-user text-primary/40 text-sm"></i>
-            </div>
-            <div>
-              <p class="font-bold text-sm text-primary">...</p>
-              <p class="text-xs text-primary/40 uppercase tracking-widest mt-0.5">...</p>
-            </div>
-          </div>
-        </div>
-
-        <div
-          class="reveal bg-white shadow-xl rounded-[2rem] p-8 border border-primary/5 flex flex-col gap-5 relative overflow-hidden">
-          <div class="absolute top-0 left-0 right-0 h-1 bg-gradient-to-r from-accent/40 to-accent/10 rounded-t-[2rem]">
-          </div>
-          <div class="flex gap-0.5 text-[#f59e0b] text-base">★★★★★</div>
-          <p class="text-primary/70 font-medium text-[15px] leading-relaxed flex-1 italic">"..."</p>
-          <div class="pt-4 border-t border-primary/8 flex items-center gap-3">
-            <div class="w-8 h-8 rounded-full bg-primary/8 flex items-center justify-center shrink-0">
-              <i class="ph ph-user text-primary/40 text-sm"></i>
-            </div>
-            <div>
-              <p class="font-bold text-sm text-primary">...</p>
-              <p class="text-xs text-primary/40 uppercase tracking-widest mt-0.5">...</p>
-            </div>
-          </div>
-        </div>
+      <div class="reveal bg-white rounded-[2rem] border border-primary/5 shadow-sm p-12 md:p-16 flex flex-col items-center">
+        <i class="ph ph-chat-circle-dots text-accent/40 text-5xl mb-6"></i>
+        <p class="text-primary/70 text-lg font-medium leading-relaxed max-w-xl">
+          Kundenstimmen folgen mit den nächsten Projekten.
+        </p>
+        <p class="text-primary/40 text-sm font-medium mt-4 max-w-md">
+          Aktuelle Referenzen finden Sie unter <a href="beispiele.html" class="text-accent hover:underline">Beispiele</a>.
+        </p>
       </div>
     </div>
   </section>
@@ -317,14 +295,12 @@
       <div class="max-w-sm">
         <div class="flex items-center gap-3 mb-4">
           <svg viewBox="0 0 24 24" fill="none" class="h-10 w-auto" xmlns="http://www.w3.org/2000/svg">
-            <path d="M12 2C12 2 5 10 5 15C5 18.866 8.134 22 12 22C15.866 22 19 18.866 19 15C19 10 12 2 12 2Z"
-              fill="currentColor" opacity="0.6" />
+            <path d="M12 2C12 2 5 10 5 15C5 18.866 8.134 22 12 22C15.866 22 19 18.866 19 15C19 10 12 2 12 2Z" fill="currentColor" opacity="0.6" />
             <path d="M12 2C12 2 5 10 5 15C5 18.866 8.134 22 12 22V2Z" fill="currentColor" />
           </svg>
           <div class="font-bold text-xl tracking-tight text-white">Webdesign Isar</div>
         </div>
-        <p class="text-sm leading-relaxed text-white/60 mb-8">Moderne Websites für Unternehmen im Isartal und Umgebung.
-        </p>
+        <p class="text-sm leading-relaxed text-white/60 mb-8">Moderne Websites für Unternehmen im Isartal und Umgebung.</p>
       </div>
       <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 w-full md:w-auto">
         <div class="flex flex-col gap-4 text-sm font-medium text-[#9ca3af]">
@@ -349,8 +325,7 @@
         </div>
       </div>
     </div>
-    <div
-      class="max-w-5xl mx-auto border-t border-white/10 pt-8 px-4 flex justify-between text-xs font-mono text-white/40">
+    <div class="max-w-5xl mx-auto border-t border-white/10 pt-8 px-4 flex justify-between text-xs font-mono text-white/40">
       <span>© 2026 Webdesign Isar.</span>
       <span>München, DE</span>
     </div>
@@ -359,8 +334,6 @@
   <script>
     gsap.registerPlugin(ScrollTrigger);
 
-
-    // Scroll reveal
     gsap.utils.toArray('.reveal').forEach((el) => {
       gsap.fromTo(el,
         { y: 36, opacity: 0 },
@@ -371,13 +344,11 @@
       );
     });
 
-    // Navbar scroll effect
     ScrollTrigger.create({
       start: "top -80", end: 99999,
       toggleClass: { className: "nav-scrolled", targets: ".navbar" }
     });
 
-    // Mobile menu
     const menuBtn = document.getElementById('menu-btn');
     const mobileMenu = document.getElementById('mobile-menu');
 

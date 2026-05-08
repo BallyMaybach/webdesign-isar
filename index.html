@@ -4,8 +4,8 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Webdesigner Wolfratshausen | Website erstellen lassen – Balthasar Beyer</title>
-  <meta name="description" content="Freiberuflicher Webdesigner aus dem Isartal. Professionelle Websites für Unternehmen in Wolfratshausen, Geretsried, Bad Tölz und München – ab 500 €. Jetzt kostenlos beraten lassen.">
+  <title>Webdesigner Wolfratshausen | Professionelle Websites ab 500 € – Balthasar Beyer</title>
+  <meta name="description" content="Professionelle Websites für Unternehmen im Isartal. Festpreis ab 500 €, Lieferung in 7-10 Tagen. Persönlich betreut von Balthasar Beyer aus Wolfratshausen.">
   <link rel="canonical" href="https://webdesign-isar.de/">
 
   <!-- Open Graph -->
@@ -39,7 +39,94 @@
     },
     "areaServed": ["Wolfratshausen", "Geretsried", "Bad Tölz", "München", "Landsberg am Lech"],
     "priceRange": "ab 500 €",
-    "serviceType": "Webdesign"
+    "serviceType": "Webdesign",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "Webdesign-Pakete",
+      "itemListElement": [
+        {
+          "@type": "Offer",
+          "name": "Landingpage (Basic)",
+          "description": "One-Pager mit modernem Design, mobil-optimiert, Kontaktformular, lokales SEO, Hosting-Setup. Lieferzeit 7-10 Tage.",
+          "price": "500",
+          "priceCurrency": "EUR",
+          "category": "Webdesign"
+        },
+        {
+          "@type": "Offer",
+          "name": "Multi-Page Website (Standard)",
+          "description": "Bis zu 5 Unterseiten, erweitertes SEO, Bildergalerie, Google Maps, 2 Feedback-Runden. Lieferzeit 2-3 Wochen.",
+          "price": "1200",
+          "priceCurrency": "EUR",
+          "category": "Webdesign"
+        },
+        {
+          "@type": "Offer",
+          "name": "Custom Projekt (Premium)",
+          "description": "Individuelle Seitenanzahl, Custom Funktionen wie Buchungssystem oder Shop, Premium-Design mit Animationen, erweiterte SEO-Optimierung.",
+          "price": "1800",
+          "priceCurrency": "EUR",
+          "priceSpecification": {
+            "@type": "PriceSpecification",
+            "price": "1800",
+            "priceCurrency": "EUR",
+            "valueAddedTaxIncluded": false,
+            "minPrice": "1800"
+          },
+          "category": "Webdesign"
+        }
+      ]
+    }
+  }
+  </script>
+
+  <!-- Schema.org FAQPage -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "Wie lange dauert eine Website?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Basic: 7-10 Tage. Standard: 2-3 Wochen. Premium: nach Absprache."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was passiert nach der Bezahlung mit Hosting und Domain?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Die Domain läuft auf Ihren Namen. Hosting kann ich übernehmen (ca. 10€/Monat) oder Sie übernehmen es selbst."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Kann ich später Änderungen vornehmen?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Kleine Änderungen kostenlos im ersten Monat. Danach Stundensatz oder Wartungspaket."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Was wenn mir das Design nicht gefällt?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Im Standard- und Premium-Paket sind Feedback-Runden inklusive. Ich passe so lange an, bis es passt."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Bist du wirklich erst 17?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Ja. Aber ich liefere professionelle Ergebnisse, sonst hätten Sie mich nicht gefunden. Schauen Sie sich meine Referenzen an."
+        }
+      }
+    ]
   }
   </script>
 
@@ -231,21 +318,39 @@
       <img src="webdesigner-wolfratshausen-isartal.webp" alt="Blick ins Isartal bei Wolfratshausen – Heimat von Webdesigner Balthasar Beyer"
         class="w-full h-full object-cover object-top">
     </div>
-    <div class="max-w-4xl mx-auto w-full relative z-20 flex flex-col items-center text-center gap-10">
+    <div class="max-w-4xl mx-auto w-full relative z-20 flex flex-col items-center text-center gap-8">
       <h1
-        class="hero-elem text-4xl md:text-6xl lg:text-[5rem] font-bold tracking-tight text-white leading-tight opacity-0"
+        class="hero-elem text-4xl md:text-5xl lg:text-[4.25rem] font-bold tracking-tight text-white leading-[1.1] opacity-0"
         style="text-shadow: 0 4px 20px rgba(0,0,0,0.6);">
-        Ihr Webdesigner aus <br>
-        dem Isartal
+        Professionelle Websites für<br>
+        Unternehmen im Isartal
       </h1>
+      <p class="hero-elem text-white/90 text-lg md:text-xl font-medium max-w-2xl opacity-0"
+        style="text-shadow: 0 2px 12px rgba(0,0,0,0.5);">
+        Festpreis ab 500 €. Lieferung in 7-10 Tagen. Persönlich betreut von Balthasar Beyer.
+      </p>
 
-      <div class="hero-elem opacity-0">
+      <div class="hero-elem opacity-0 flex flex-col sm:flex-row items-center gap-4">
         <a href="#kontakt"
-          class="group rounded-full font-bold inline-flex items-center justify-center px-10 py-5 text-sm bg-accent text-white shadow-lg border border-accent hover:bg-accent/90 transition-all duration-300">
-          Jetzt kontaktieren <i
+          class="group rounded-full font-bold inline-flex items-center justify-center px-8 py-4 text-sm bg-accent text-white shadow-lg border border-accent hover:bg-accent/90 transition-all duration-300">
+          Kostenloses Erstgespräch <i
             class="ph ph-arrow-right ml-2.5 font-bold group-hover:translate-x-1 transition-transform"></i>
         </a>
+        <a href="#preise"
+          class="group rounded-full font-bold inline-flex items-center justify-center px-8 py-4 text-sm bg-white/10 backdrop-blur-md text-white border border-white/40 hover:bg-white/20 transition-all duration-300">
+          Pakete ansehen
+        </a>
       </div>
+    </div>
+  </section>
+
+  <!-- TRUST SIGNALS -->
+  <section class="bg-white border-b border-black/5 py-4 px-6">
+    <div class="max-w-5xl mx-auto flex flex-wrap items-center justify-center gap-x-8 gap-y-2 text-xs md:text-sm font-medium text-primary/70">
+      <span class="flex items-center gap-1.5"><i class="ph-fill ph-check-circle text-accent"></i> Festpreis-Garantie</span>
+      <span class="flex items-center gap-1.5"><i class="ph-fill ph-check-circle text-accent"></i> Persönlicher Ansprechpartner</span>
+      <span class="flex items-center gap-1.5"><i class="ph-fill ph-check-circle text-accent"></i> DSGVO-konform</span>
+      <span class="flex items-center gap-1.5"><i class="ph-fill ph-check-circle text-accent"></i> Made in Bayern</span>
     </div>
   </section>
 
@@ -277,6 +382,59 @@
     </div>
   </section>
 
+  <!-- PROZESS -->
+  <section id="prozess" class="py-24 px-6 bg-white text-primary border-y border-black/5">
+    <div class="max-w-6xl mx-auto">
+      <div class="reveal text-center mb-16 max-w-3xl mx-auto">
+        <p class="text-accent font-medium text-sm tracking-wide mb-3">Ablauf</p>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary mb-4">So arbeiten wir zusammen</h2>
+        <p class="text-primary/60 text-lg font-medium leading-relaxed">Vom ersten Gespräch bis zur fertigen Website – transparent und ohne Überraschungen.</p>
+      </div>
+
+      <div class="relative">
+        <div class="hidden lg:block absolute top-7 left-[7%] right-[7%] h-px bg-gradient-to-r from-transparent via-primary/15 to-transparent"></div>
+
+        <ol class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-7 gap-8 lg:gap-4 relative">
+          <li class="reveal flex flex-col items-center text-center lg:px-2">
+            <div class="w-14 h-14 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-accent/30 mb-4 relative z-10 ring-4 ring-white">1</div>
+            <h3 class="font-bold text-sm text-primary mb-1.5">Erstgespräch</h3>
+            <p class="text-xs text-primary/55 leading-relaxed font-medium">Kostenlos, ca. 20 Min – per WhatsApp, Telefon oder vor Ort.</p>
+          </li>
+          <li class="reveal flex flex-col items-center text-center lg:px-2">
+            <div class="w-14 h-14 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-accent/30 mb-4 relative z-10 ring-4 ring-white">2</div>
+            <h3 class="font-bold text-sm text-primary mb-1.5">Angebot</h3>
+            <p class="text-xs text-primary/55 leading-relaxed font-medium">Innerhalb von 48h erhalten Sie ein Festpreis-Angebot per Mail.</p>
+          </li>
+          <li class="reveal flex flex-col items-center text-center lg:px-2">
+            <div class="w-14 h-14 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-accent/30 mb-4 relative z-10 ring-4 ring-white">3</div>
+            <h3 class="font-bold text-sm text-primary mb-1.5">Anzahlung 50 %</h3>
+            <p class="text-xs text-primary/55 leading-relaxed font-medium">Nach Auftragsbestätigung. Erst dann beginne ich mit der Arbeit.</p>
+          </li>
+          <li class="reveal flex flex-col items-center text-center lg:px-2">
+            <div class="w-14 h-14 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-accent/30 mb-4 relative z-10 ring-4 ring-white">4</div>
+            <h3 class="font-bold text-sm text-primary mb-1.5">Design & Entwicklung</h3>
+            <p class="text-xs text-primary/55 leading-relaxed font-medium">Ich baue Ihre Website. Den Fortschritt verfolgen Sie jederzeit live.</p>
+          </li>
+          <li class="reveal flex flex-col items-center text-center lg:px-2">
+            <div class="w-14 h-14 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-accent/30 mb-4 relative z-10 ring-4 ring-white">5</div>
+            <h3 class="font-bold text-sm text-primary mb-1.5">Feedback-Runde</h3>
+            <p class="text-xs text-primary/55 leading-relaxed font-medium">Sie schauen sich das Ergebnis an, wir passen Details an.</p>
+          </li>
+          <li class="reveal flex flex-col items-center text-center lg:px-2">
+            <div class="w-14 h-14 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-accent/30 mb-4 relative z-10 ring-4 ring-white">6</div>
+            <h3 class="font-bold text-sm text-primary mb-1.5">Live-Schaltung</h3>
+            <p class="text-xs text-primary/55 leading-relaxed font-medium">Domain wird verbunden, Website geht online.</p>
+          </li>
+          <li class="reveal flex flex-col items-center text-center lg:px-2">
+            <div class="w-14 h-14 rounded-full bg-accent text-white flex items-center justify-center font-bold text-lg shadow-lg shadow-accent/30 mb-4 relative z-10 ring-4 ring-white">7</div>
+            <h3 class="font-bold text-sm text-primary mb-1.5">Restzahlung</h3>
+            <p class="text-xs text-primary/55 leading-relaxed font-medium">Erst wenn Sie zufrieden sind, geht die Schlussrechnung raus.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+  </section>
+
   <!-- PORTFOLIO -->
   <section id="portfolio" class="py-24 px-6 bg-surface text-primary relative overflow-hidden w-full">
     <div class="max-w-5xl mx-auto relative z-10">
@@ -285,7 +443,7 @@
         <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary">Einblick in aktuelle Projekte</h2>
       </div>
 
-      <div id="portfolio-grid" class="grid md:grid-cols-2 gap-8">
+      <div id="portfolio-grid" class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
         <a href="https://annikablendl.com/" target="_blank" rel="noopener noreferrer"
           class="reveal group w-full flex flex-col relative rounded-[1.5rem] overflow-hidden border border-black/5 bg-white transition-all shadow-xl hover:-translate-y-2 hover:shadow-2xl duration-500">
           <div class="w-full h-10 bg-white border-b border-black/5 flex items-center px-5 gap-2 shrink-0">
@@ -329,47 +487,175 @@
               class="ph ph-arrow-up-right text-primary/30 text-xl group-hover:text-accent transition-colors duration-300"></i>
           </div>
         </a>
+
+        <div class="reveal group w-full flex flex-col relative rounded-[1.5rem] overflow-hidden border border-black/5 bg-white shadow-xl">
+          <div class="w-full h-10 bg-white border-b border-black/5 flex items-center px-5 gap-2 shrink-0">
+            <div class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></div>
+            <div class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></div>
+          </div>
+          <div class="w-full aspect-[16/10] overflow-hidden relative flex items-center justify-center"
+            style="background: linear-gradient(135deg, #502379 0%, #6B2C9A 50%, #502379 100%);">
+            <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,0.4) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(255,255,255,0.3) 0%, transparent 40%);"></div>
+            <div class="relative z-10 text-center px-6">
+              <div class="text-white font-bold tracking-tight" style="font-size: clamp(2.5rem, 6vw, 4rem); letter-spacing: -0.04em;">Volt</div>
+              <div class="text-white/80 font-medium text-sm tracking-[0.3em] uppercase mt-1">Berlin</div>
+            </div>
+            <span class="absolute top-4 right-4 bg-white/95 backdrop-blur-sm text-primary text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
+              <span class="w-1.5 h-1.5 rounded-full bg-[#f59e0b] animate-pulse"></span>
+              In Entwicklung
+            </span>
+          </div>
+          <div class="px-6 py-5 bg-white flex items-center justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-primary">Kampagnen-Website</h3>
+              <p class="text-sm text-primary/60">Politik / Non-Profit · Launch Sommer 2026</p>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </section>
 
   <!-- PREISE -->
   <section id="preise" class="py-24 px-6 bg-background text-primary">
-    <div class="max-w-5xl mx-auto">
-      <div class="reveal text-center mb-16">
+    <div class="max-w-6xl mx-auto">
+      <div class="reveal text-center mb-16 max-w-2xl mx-auto">
         <p class="text-accent font-medium text-sm tracking-wide mb-3">Transparent & fair</p>
-        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-primary">Transparente Preise</h2>
-        <p class="text-primary/60 font-medium">Individuelle Angebote je nach Umfang möglich.</p>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight mb-4 text-primary">Drei Pakete, klare Preise</h2>
+        <p class="text-primary/60 font-medium leading-relaxed">Festpreise statt Stundenchaos. Sie wissen vorher, was Sie bekommen – und was es kostet.</p>
       </div>
-      <div class="reveal max-w-md mx-auto">
-        <div class="bg-white rounded-[2rem] p-8 md:p-10 border border-black/5 shadow-2xl relative flex flex-col">
-          <div
-            class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white px-5 py-1.5 text-sm font-semibold rounded-full whitespace-nowrap shadow-md">
-            Komplettpaket</div>
-          <h3 class="text-3xl font-bold mb-3 text-center">Landingpage</h3>
-          <p class="text-sm text-primary/60 mb-8 font-medium leading-relaxed text-center">Eine Website, die ganz auf
-            Ihre Bedürfnisse zugeschnitten ist.</p>
-          <div class="text-center mb-8">
-            <div class="text-5xl font-bold text-primary mb-2">ab 500 €</div>
-            <p class="text-sm text-primary/50 font-medium">Preis variiert nach Projekt</p>
+
+      <div class="grid md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+        <!-- BASIC -->
+        <div class="reveal bg-white rounded-[2rem] p-8 border border-black/5 shadow-xl flex flex-col">
+          <h3 class="text-2xl font-bold mb-1.5">Landingpage</h3>
+          <p class="text-sm text-primary/55 mb-6 font-medium">Perfekt für lokale Unternehmen</p>
+          <div class="mb-6">
+            <div class="text-4xl font-bold text-primary">500 €</div>
+            <p class="text-xs text-primary/50 font-medium mt-1">Festpreis · einmalig</p>
           </div>
-          <ul class="space-y-4 text-sm font-medium text-primary/80 mb-8 flex-1 max-w-sm mx-auto w-full">
-            <li class="flex gap-3 items-center"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0"></i>
-              modernes Design</li>
-            <li class="flex gap-3 items-center"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0"></i>
-              mobiloptimiert</li>
-            <li class="flex gap-3 items-center"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0"></i>
-              schnelle Ladezeit</li>
-            <li class="flex gap-3 items-center"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0"></i>
-              Google optimiert</li>
-            <li class="flex gap-3 items-center"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0"></i>
-              Kontaktformular für Anfragen</li>
+          <ul class="space-y-3 text-sm font-medium text-primary/80 mb-8 flex-1">
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>1 Seite (One-Pager)</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Modernes, individuelles Design</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Mobil-optimiert</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Kontaktformular</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Google-optimiert (lokales SEO)</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Hosting-Setup inklusive</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph ph-clock text-primary/40 text-lg shrink-0 mt-px"></i><span class="text-primary/60">Lieferzeit: 7-10 Tage</span></li>
           </ul>
-          <a href="#kontakt"
-            class="group relative overflow-hidden rounded-full font-bold magnetic-btn w-full inline-flex items-center justify-center px-8 py-4 text-sm bg-accent text-white border border-accent hover:bg-accent/90 transition-all">
-            <span class="relative z-10">Jetzt anfragen</span>
+          <a href="#kontakt" class="group rounded-full font-bold magnetic-btn w-full inline-flex items-center justify-center px-6 py-3.5 text-sm bg-primary text-white hover:bg-primary/90 transition-all">
+            Jetzt anfragen
           </a>
         </div>
+
+        <!-- STANDARD (highlighted) -->
+        <div class="reveal bg-white rounded-[2rem] p-8 border-2 border-accent shadow-2xl shadow-accent/10 flex flex-col relative md:-translate-y-2">
+          <div class="absolute -top-4 left-1/2 -translate-x-1/2 bg-accent text-white px-5 py-1.5 text-xs font-bold uppercase tracking-wider rounded-full whitespace-nowrap shadow-lg">
+            Beliebteste Wahl
+          </div>
+          <h3 class="text-2xl font-bold mb-1.5">Multi-Page Website</h3>
+          <p class="text-sm text-primary/55 mb-6 font-medium">Für Unternehmen mit mehreren Leistungen</p>
+          <div class="mb-6">
+            <div class="text-4xl font-bold text-primary">1.200 €</div>
+            <p class="text-xs text-primary/50 font-medium mt-1">Festpreis · einmalig</p>
+          </div>
+          <ul class="space-y-3 text-sm font-medium text-primary/80 mb-8 flex-1">
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Bis zu 5 Unterseiten</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span class="font-semibold">Alles aus Basic</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Erweitertes SEO</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Bildergalerie</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Google Maps Integration</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>2 Feedback-Runden</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph ph-clock text-primary/40 text-lg shrink-0 mt-px"></i><span class="text-primary/60">Lieferzeit: 2-3 Wochen</span></li>
+          </ul>
+          <a href="#kontakt" class="group rounded-full font-bold magnetic-btn w-full inline-flex items-center justify-center px-6 py-3.5 text-sm bg-accent text-white hover:bg-accent/90 transition-all shadow-lg shadow-accent/30">
+            Jetzt anfragen
+          </a>
+        </div>
+
+        <!-- PREMIUM -->
+        <div class="reveal bg-white rounded-[2rem] p-8 border border-black/5 shadow-xl flex flex-col">
+          <h3 class="text-2xl font-bold mb-1.5">Custom Projekt</h3>
+          <p class="text-sm text-primary/55 mb-6 font-medium">Maßgeschneidert für komplexe Anforderungen</p>
+          <div class="mb-6">
+            <div class="text-4xl font-bold text-primary">ab 1.800 €</div>
+            <p class="text-xs text-primary/50 font-medium mt-1">Individuelles Angebot</p>
+          </div>
+          <ul class="space-y-3 text-sm font-medium text-primary/80 mb-8 flex-1">
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Individuelle Seitenanzahl</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Custom Funktionen (Buchungssystem, Shop, etc.)</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Premium-Design mit Animationen</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Erweiterte SEO-Optimierung</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph-fill ph-check-circle text-accent text-lg shrink-0 mt-px"></i><span>Persönliche Betreuung</span></li>
+            <li class="flex gap-2.5 items-start"><i class="ph ph-clock text-primary/40 text-lg shrink-0 mt-px"></i><span class="text-primary/60">Lieferzeit: nach Absprache</span></li>
+          </ul>
+          <a href="#kontakt" class="group rounded-full font-bold magnetic-btn w-full inline-flex items-center justify-center px-6 py-3.5 text-sm bg-primary text-white hover:bg-primary/90 transition-all">
+            Beratung vereinbaren
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="py-24 px-6 bg-surface text-primary">
+    <div class="max-w-3xl mx-auto">
+      <div class="reveal text-center mb-14">
+        <p class="text-accent font-medium text-sm tracking-wide mb-3">Häufige Fragen</p>
+        <h2 class="text-4xl md:text-5xl font-bold tracking-tight text-primary">Was Sie wissen wollen</h2>
+      </div>
+
+      <div class="space-y-3">
+        <details class="reveal group bg-white rounded-2xl border border-black/5 shadow-sm overflow-hidden">
+          <summary class="cursor-pointer list-none flex items-center justify-between p-6 font-bold text-primary text-base">
+            Wie lange dauert eine Website?
+            <i class="ph ph-plus text-primary/40 text-xl shrink-0 ml-4 group-open:rotate-45 transition-transform duration-300"></i>
+          </summary>
+          <div class="px-6 pb-6 text-primary/70 text-sm leading-relaxed font-medium">
+            Basic: 7-10 Tage. Standard: 2-3 Wochen. Premium: nach Absprache.
+          </div>
+        </details>
+
+        <details class="reveal group bg-white rounded-2xl border border-black/5 shadow-sm overflow-hidden">
+          <summary class="cursor-pointer list-none flex items-center justify-between p-6 font-bold text-primary text-base">
+            Was passiert nach der Bezahlung mit Hosting und Domain?
+            <i class="ph ph-plus text-primary/40 text-xl shrink-0 ml-4 group-open:rotate-45 transition-transform duration-300"></i>
+          </summary>
+          <div class="px-6 pb-6 text-primary/70 text-sm leading-relaxed font-medium">
+            Die Domain läuft auf Ihren Namen. Hosting kann ich übernehmen (ca. 10 €/Monat) oder Sie übernehmen es selbst.
+          </div>
+        </details>
+
+        <details class="reveal group bg-white rounded-2xl border border-black/5 shadow-sm overflow-hidden">
+          <summary class="cursor-pointer list-none flex items-center justify-between p-6 font-bold text-primary text-base">
+            Kann ich später Änderungen vornehmen?
+            <i class="ph ph-plus text-primary/40 text-xl shrink-0 ml-4 group-open:rotate-45 transition-transform duration-300"></i>
+          </summary>
+          <div class="px-6 pb-6 text-primary/70 text-sm leading-relaxed font-medium">
+            Ja. Kleine Änderungen sind im ersten Monat kostenlos. Danach gilt mein Stundensatz oder ein Wartungspaket.
+          </div>
+        </details>
+
+        <details class="reveal group bg-white rounded-2xl border border-black/5 shadow-sm overflow-hidden">
+          <summary class="cursor-pointer list-none flex items-center justify-between p-6 font-bold text-primary text-base">
+            Was, wenn mir das Design nicht gefällt?
+            <i class="ph ph-plus text-primary/40 text-xl shrink-0 ml-4 group-open:rotate-45 transition-transform duration-300"></i>
+          </summary>
+          <div class="px-6 pb-6 text-primary/70 text-sm leading-relaxed font-medium">
+            Im Standard- und Premium-Paket sind Feedback-Runden inklusive. Ich passe so lange an, bis es passt.
+          </div>
+        </details>
+
+        <details class="reveal group bg-white rounded-2xl border border-black/5 shadow-sm overflow-hidden">
+          <summary class="cursor-pointer list-none flex items-center justify-between p-6 font-bold text-primary text-base">
+            Bist du wirklich erst 17?
+            <i class="ph ph-plus text-primary/40 text-xl shrink-0 ml-4 group-open:rotate-45 transition-transform duration-300"></i>
+          </summary>
+          <div class="px-6 pb-6 text-primary/70 text-sm leading-relaxed font-medium">
+            Ja. Aber ich liefere professionelle Ergebnisse, sonst hätten Sie mich nicht gefunden. Schauen Sie sich meine Referenzen an.
+          </div>
+        </details>
       </div>
     </div>
   </section>

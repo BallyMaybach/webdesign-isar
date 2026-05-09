@@ -138,9 +138,13 @@ body {
   opacity: 0;
   transform: translateY(20px);
 }
+/* Portfolio cards: transition only on opacity+transform, never on all */
 .portfolio-card {
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+#portfolio-grid:not(.in-view) .portfolio-card {
   opacity: 0;
-  transform: translateY(36px);
+  transform: translateY(28px);
 }
 
 /* ---------- FAQ details/summary ---------- */

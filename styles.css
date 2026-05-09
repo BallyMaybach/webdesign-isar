@@ -115,6 +115,8 @@ body {
   border-radius: 999px;
   font-weight: 700;
   font-size: 14px;
+  white-space: nowrap;
+  max-width: calc(100vw - 32px);
   box-shadow: 0 10px 30px -8px rgba(0,113,227,.55), 0 4px 12px rgba(0,0,0,.18);
   display: inline-flex;
   align-items: center;

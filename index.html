@@ -100,8 +100,8 @@
       "name": "Webdesign-Pakete",
       "itemListElement": [
         { "@type": "Offer", "name": "Landingpage (Basic)", "price": "300", "priceCurrency": "EUR", "description": "One-Pager mit modernem Design, mobil-optimiert, Kontaktformular, lokales SEO. Lieferzeit 7-10 Tage." },
-        { "@type": "Offer", "name": "Multi-Page Website (Standard)", "price": "1400", "priceCurrency": "EUR", "description": "Bis zu 5 Unterseiten, erweitertes SEO, Google Maps, 2 Feedback-Runden. Lieferzeit 2-3 Wochen." },
-        { "@type": "Offer", "name": "Custom Projekt (Premium)", "price": "2000", "priceCurrency": "EUR", "description": "Individuelle Seitenanzahl, Custom Funktionen, Premium-Design mit Animationen." }
+        { "@type": "Offer", "name": "Multi-Page Website (Standard)", "price": "500", "priceCurrency": "EUR", "description": "Bis zu 5 Unterseiten, erweitertes SEO, Google Maps, 2 Feedback-Runden. Lieferzeit 2-3 Wochen." },
+        { "@type": "Offer", "name": "Custom Projekt (Premium)", "price": "800", "priceCurrency": "EUR", "description": "Individuelle Seitenanzahl, Custom Funktionen, Premium-Design mit Animationen." }
       ]
     }
   }
@@ -306,7 +306,7 @@
       </div>
 
       <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-        <div class="reveal group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl">
+        <div class="portfolio-card group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl">
           <div class="h-10 bg-white border-b border-black/5 flex items-center px-5 gap-2 shrink-0">
             <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></span>
             <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></span>
@@ -332,7 +332,7 @@
         </div>
 
         <a href="https://annikablendl.com/" target="_blank" rel="noopener noreferrer"
-          class="reveal group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
+          class="portfolio-card group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
           <div class="h-10 bg-white border-b border-black/5 flex items-center px-5 gap-2 shrink-0">
             <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></span>
             <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></span>
@@ -353,7 +353,7 @@
         </a>
 
         <a href="https://nachhilfe-icking.netlify.app/" target="_blank" rel="noopener noreferrer"
-          class="reveal group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
+          class="portfolio-card group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-all duration-500">
           <div class="h-10 bg-white border-b border-black/5 flex items-center px-5 gap-2 shrink-0">
             <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></span>
             <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></span>
@@ -615,6 +615,15 @@
           { y: 0, opacity: 1, duration: 0.7, ease: 'power2.out',
             scrollTrigger: { trigger: el, start: 'top 88%', once: true } });
       });
+
+      // Portfolio cards – staggered as a group, all fire together
+      const portfolioCards = gsap.utils.toArray('.portfolio-card');
+      if (portfolioCards.length) {
+        gsap.fromTo(portfolioCards,
+          { y: 36, opacity: 0 },
+          { y: 0, opacity: 1, duration: 0.6, stagger: 0.1, ease: 'power2.out',
+            scrollTrigger: { trigger: '#portfolio .grid', start: 'top 85%', once: true } });
+      }
 
       // Prozess steps – staggered together
       const steps = gsap.utils.toArray('.prozess-step');

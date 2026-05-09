@@ -138,6 +138,10 @@ body {
   opacity: 0;
   transform: translateY(20px);
 }
+.portfolio-card {
+  opacity: 0;
+  transform: translateY(36px);
+}
 
 /* ---------- FAQ details/summary ---------- */
 summary { list-style: none; cursor: pointer; }

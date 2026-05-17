@@ -484,9 +484,9 @@
       <div class="grid md:grid-cols-2 gap-10 items-start">
 
         <!-- Formular -->
-        <form class="flex flex-col gap-4" onsubmit="handleFormSubmit(event)">
-          <input type="hidden" name="_subject" value="Neue Kontaktanfrage – WebdesignIsar">
-          <input type="text" name="_honey" style="display:none">
+        <form name="kontakt" data-netlify="true" data-netlify-honeypot="bot-field" class="flex flex-col gap-4" onsubmit="handleFormSubmit(event)">
+          <input type="hidden" name="form-name" value="kontakt">
+          <input type="text" name="bot-field" style="display:none">
 
           <div>
             <label for="f-name" class="block text-xs font-semibold text-white/60 mb-1.5 uppercase tracking-wider">Name</label>
@@ -613,13 +613,12 @@
     function handleFormSubmit(e) {
       e.preventDefault();
       const form = e.target;
-      const data = Object.fromEntries(new FormData(form));
-      fetch('https://formsubmit.co/ajax/balthasar.beyer@gmail.com', {
+      const body = new URLSearchParams(new FormData(form)).toString();
+      fetch('/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(data)
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body
       })
-        .then(res => res.json())
         .then(() => {
           document.getElementById('form-success').classList.remove('hidden');
           form.reset();

@@ -486,6 +486,8 @@
         <!-- Formular -->
         <form class="flex flex-col gap-4" onsubmit="handleFormSubmit(event)">
           <input type="hidden" name="_subject" value="Neue Kontaktanfrage – Webdesign Isar">
+          <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Anfrage! Ich habe Ihre Nachricht erhalten und melde mich innerhalb von 24 Stunden bei Ihnen. Mit freundlichen Grüßen, Balthasar Beyer – Webdesign Isar">
+          <input type="hidden" name="_template" value="box">
           <input type="text" name="_honey" style="display:none">
 
           <div>
@@ -613,17 +615,29 @@
     function handleFormSubmit(e) {
       e.preventDefault();
       const form = e.target;
+      const btn = form.querySelector('button[type="submit"]');
+      const originalHTML = btn.innerHTML;
+
+      btn.disabled = true;
+      btn.innerHTML = '<i class="ph ph-circle-notch ph-spin text-base"></i> Wird gesendet…';
+
       const data = Object.fromEntries(new FormData(form));
       fetch('https://formsubmit.co/ajax/balthasar.beyer@gmail.com', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(data)
       })
+        .then(res => res.json())
         .then(() => {
           document.getElementById('form-success').classList.remove('hidden');
           form.reset();
+          btn.innerHTML = '<i class="ph ph-check text-base"></i> Gesendet';
         })
-        .catch(() => { form.submit(); });
+        .catch(() => {
+          btn.disabled = false;
+          btn.innerHTML = originalHTML;
+          form.submit();
+        });
     }
 
     document.addEventListener('DOMContentLoaded', () => {

@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Nachricht erhalten – Webdesign Isar</title>
+  <meta name="robots" content="noindex, nofollow">
+  <link rel="canonical" href="https://webdesign-isar.de/danke.html">
+  <meta name="theme-color" content="#0071E3">
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="fonts/fonts.css">
+  <link rel="stylesheet" href="styles.css">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            background: "#F4F7FC",
+            primary: "#1A2744",
+            accent: "#0071E3",
+            card: "#FFFFFF",
+            surface: "#EBF0FA"
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            serif: ['DM Serif Display', 'serif'],
+            mono: ['Space Mono', 'monospace']
+          }
+        }
+      }
+    }
+  </script>
+  <script src="https://unpkg.com/@phosphor-icons/web" defer></script>
+  <style>
+    @keyframes pop-in {
+      0%   { transform: scale(0.6); opacity: 0; }
+      70%  { transform: scale(1.08); opacity: 1; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+    @keyframes fade-up {
+      from { transform: translateY(16px); opacity: 0; }
+      to   { transform: translateY(0);    opacity: 1; }
+    }
+    .anim-check  { animation: pop-in  0.5s cubic-bezier(.22,.68,0,1.4) 0.1s both; }
+    .anim-text   { animation: fade-up 0.5s ease 0.45s both; }
+    .anim-btn    { animation: fade-up 0.5s ease 0.65s both; }
+    .anim-note   { animation: fade-up 0.5s ease 0.8s  both; }
+  </style>
+</head>
+
+<body class="w-full relative bg-background min-h-screen flex flex-col">
+
+  <!-- NAVBAR -->
+  <nav class="navbar fixed top-0 left-0 z-50 w-full bg-white text-primary drop-shadow-sm flex items-center" aria-label="Hauptnavigation">
+    <div class="max-w-7xl mx-auto w-full flex items-center justify-between px-4 md:px-6 h-16">
+      <a href="/" class="flex items-center gap-3" aria-label="Webdesign Isar – Startseite">
+        <svg viewBox="0 0 24 24" fill="none" class="h-8 w-auto" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+          <path d="M12 2C12 2 5 10 5 15C5 18.866 8.134 22 12 22C15.866 22 19 18.866 19 15C19 10 12 2 12 2Z" fill="#0071E3" />
+          <path d="M12 2C12 2 5 10 5 15C5 18.866 8.134 22 12 22V2Z" fill="currentColor" fill-opacity="0.9" />
+        </svg>
+        <span class="font-bold text-lg tracking-tight text-primary">Webdesign Isar</span>
+      </a>
+      <a href="/" class="text-sm font-semibold text-white bg-accent hover:bg-accent/90 px-5 py-2.5 rounded-md transition-all">
+        Zur Startseite
+      </a>
+    </div>
+  </nav>
+
+  <!-- MAIN -->
+  <main class="flex-1 flex items-center justify-center px-4 pt-24 pb-16">
+    <div class="text-center max-w-md mx-auto">
+
+      <!-- Check Icon -->
+      <div class="anim-check inline-flex items-center justify-center w-24 h-24 rounded-full bg-accent/10 mb-8">
+        <i class="ph-fill ph-check-circle text-accent" style="font-size: 3rem;"></i>
+      </div>
+
+      <!-- Text -->
+      <div class="anim-text">
+        <h1 class="text-3xl md:text-4xl font-bold text-primary tracking-tight mb-3">
+          Nachricht erhalten!
+        </h1>
+        <p class="text-primary/60 text-base leading-relaxed">
+          Ich melde mich innerhalb von <strong class="text-primary/80 font-semibold">24 Stunden</strong> bei Ihnen –
+          Mo bis Fr, auch per WhatsApp.
+        </p>
+      </div>
+
+      <!-- CTA -->
+      <div class="anim-btn mt-8">
+        <a href="/"
+          class="inline-flex items-center gap-2 bg-accent text-white font-bold px-7 py-3.5 rounded-full text-sm hover:bg-accent/90 transition-all shadow-lg shadow-accent/25">
+          <i class="ph ph-house text-base"></i>
+          Zurück zur Startseite
+        </a>
+      </div>
+
+      <!-- Divider & Quick contacts -->
+      <div class="anim-note mt-10 pt-8 border-t border-primary/10">
+        <p class="text-xs text-primary/40 font-medium mb-4 uppercase tracking-widest">Oder direkt melden</p>
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <a href="https://wa.me/491702783450" target="_blank" rel="noopener noreferrer"
+            class="flex items-center gap-2 text-sm font-semibold text-primary/70 hover:text-primary bg-white border border-primary/10 rounded-xl px-5 py-3 transition-colors shadow-sm">
+            <i class="ph-fill ph-whatsapp-logo text-[#25D366] text-lg"></i>
+            WhatsApp
+          </a>
+          <a href="mailto:balthasar.beyer@gmail.com"
+            class="flex items-center gap-2 text-sm font-semibold text-primary/70 hover:text-primary bg-white border border-primary/10 rounded-xl px-5 py-3 transition-colors shadow-sm">
+            <i class="ph-fill ph-envelope-simple text-accent text-lg"></i>
+            E-Mail
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="border-t border-primary/10 py-6 text-center text-xs text-primary/30 font-mono">
+    © 2026 Webdesign Isar · Balthasar Beyer · Wolfratshausen
+  </footer>
+
+</body>
+</html>

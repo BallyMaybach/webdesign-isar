@@ -516,7 +516,7 @@
             <i class="ph ph-paper-plane-tilt text-base"></i>
             Nachricht senden
           </button>
-          <p id="form-success" class="hidden text-green-400 text-sm font-medium text-center">Danke! Ich melde mich innerhalb von 24 Stunden.</p>
+          <p id="form-error" class="hidden text-red-400 text-sm font-medium text-center">Etwas hat nicht geklappt. Bitte direkt an balthasar.beyer@gmail.com schreiben.</p>
         </form>
 
         <!-- Direkt-Kontakt -->
@@ -628,15 +628,18 @@
         body: JSON.stringify(data)
       })
         .then(res => res.json())
-        .then(() => {
-          document.getElementById('form-success').classList.remove('hidden');
-          form.reset();
-          btn.innerHTML = '<i class="ph ph-check text-base"></i> Gesendet';
+        .then(json => {
+          if (json.success === 'true' || json.success === true) {
+            window.location.href = '/danke.html';
+          } else {
+            throw new Error('Fehler vom Server');
+          }
         })
         .catch(() => {
           btn.disabled = false;
           btn.innerHTML = originalHTML;
-          form.submit();
+          const errEl = document.getElementById('form-error');
+          if (errEl) errEl.classList.remove('hidden');
         });
     }
 

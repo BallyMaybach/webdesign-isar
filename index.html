@@ -485,9 +485,9 @@
 
         <!-- Formular -->
         <form class="flex flex-col gap-4" onsubmit="handleFormSubmit(event)">
-          <input type="hidden" name="_subject" value="Neue Kontaktanfrage – Webdesign Isar">
-          <input type="hidden" name="_template" value="box">
-          <input type="text" name="_honey" style="display:none">
+          <input type="hidden" name="access_key" value="9a35ee95-89ee-432e-b9b6-de52dc8def04">
+          <input type="hidden" name="subject" value="Neue Kontaktanfrage – Webdesign Isar">
+          <input type="checkbox" name="botcheck" style="display:none">
 
           <div>
             <label for="f-name" class="block text-xs font-semibold text-white/60 mb-1.5 uppercase tracking-wider">Name</label>
@@ -621,14 +621,14 @@
       btn.innerHTML = '<i class="ph ph-circle-notch ph-spin text-base"></i> Wird gesendet…';
 
       const data = Object.fromEntries(new FormData(form));
-      fetch('https://formsubmit.co/ajax/balthasar.beyer@gmail.com', {
+      fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
         body: JSON.stringify(data)
       })
         .then(res => res.json())
         .then(json => {
-          if (json.success === 'true' || json.success === true) {
+          if (json.success) {
             window.location.href = '/danke.html';
           } else {
             throw new Error('Fehler vom Server');

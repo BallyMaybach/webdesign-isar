@@ -485,10 +485,7 @@
 
         <!-- Formular -->
         <form class="flex flex-col gap-4" onsubmit="handleFormSubmit(event)">
-          <input type="hidden" name="_subject" value="Neue Kontaktanfrage – Webdesign Isar">
-          <input type="hidden" name="_autoresponse" value="Vielen Dank für Ihre Anfrage! Ich habe Ihre Nachricht erhalten und melde mich innerhalb von 24 Stunden bei Ihnen. Mit freundlichen Grüßen, Balthasar Beyer – Webdesign Isar">
-          <input type="hidden" name="_template" value="box">
-          <input type="text" name="_honey" style="display:none">
+          <input type="text" name="website" style="display:none" tabindex="-1" autocomplete="off">
 
           <div>
             <label for="f-name" class="block text-xs font-semibold text-white/60 mb-1.5 uppercase tracking-wider">Name</label>
@@ -621,19 +618,27 @@
       btn.disabled = true;
       btn.innerHTML = '<i class="ph ph-circle-notch ph-spin text-base"></i> Wird gesendet…';
 
-      const data = Object.fromEntries(new FormData(form));
-      fetch('https://formsubmit.co/ajax/balthasar.beyer@gmail.com', {
+      const name = form.querySelector('[name="name"]').value.trim();
+      const email = form.querySelector('[name="email"]').value.trim();
+      const nachricht = form.querySelector('[name="nachricht"]').value.trim();
+
+      const body = new URLSearchParams({
+        'formID': '261363677220052',
+        'q2_q2_fullname0[first]': name,
+        'q2_q2_fullname0[last]': '',
+        'q3_q3_email1': email,
+        'q4_q4_textarea2': nachricht,
+        'simple_spc': '261363677220052'
+      });
+
+      fetch('https://submit.jotform.com/submit/261363677220052/', {
         method: 'POST',
-        headers: { 'Content-Type': 'application/json', 'Accept': 'application/json' },
-        body: JSON.stringify(data)
+        mode: 'no-cors',
+        headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+        body: body.toString()
       })
-        .then(res => res.json())
-        .then(json => {
-          if (json.success === 'true' || json.success === true) {
-            window.location.href = '/danke.html';
-          } else {
-            throw new Error('Fehler vom Server');
-          }
+        .then(() => {
+          window.location.href = '/danke.html';
         })
         .catch(() => {
           btn.disabled = false;

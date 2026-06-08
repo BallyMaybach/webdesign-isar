@@ -19,7 +19,7 @@
   <meta property="og:url" content="https://webdesign-isar.de/beispiele.html">
   <meta property="og:title" content="Webdesign Beispiele &amp; Referenzen | Webdesign Isar">
   <meta property="og:description" content="Echte Webdesign-Referenzen aus dem Isartal: moderne Landingpages und lokale Websites.">
-  <meta property="og:image" content="https://webdesign-isar.de/webdesigner-wolfratshausen-isartal.webp">
+  <meta property="og:image" content="https://webdesign-isar.de/assets/profile-pic.webp">
   <meta property="og:image:width" content="2000">
   <meta property="og:image:height" content="823">
 
@@ -27,7 +27,7 @@
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Webdesign Beispiele &amp; Referenzen">
   <meta name="twitter:description" content="Echte Webdesign-Referenzen aus dem Isartal.">
-  <meta name="twitter:image" content="https://webdesign-isar.de/webdesigner-wolfratshausen-isartal.webp">
+  <meta name="twitter:image" content="https://webdesign-isar.de/assets/profile-pic.webp">
 
   <meta name="theme-color" content="#0071E3">
 
@@ -35,7 +35,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <!-- Preload LCP -->
-  <link rel="preload" as="image" href="annikablendl.com.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/annikablendl.com.webp" fetchpriority="high">
 
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="styles.css">
@@ -149,30 +149,27 @@
     <div class="max-w-5xl mx-auto">
       <div id="portfolio-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
 
-        <div class="portfolio-card group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl">
+        <a href="https://voltdeutschland.org/berlin" target="_blank" rel="noopener noreferrer"
+          class="portfolio-card group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-[transform,box-shadow] duration-500">
           <div class="h-10 bg-white border-b border-black/5 flex items-center px-5 gap-2 shrink-0">
             <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></span>
             <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></span>
             <span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></span>
           </div>
-          <div class="aspect-[16/10] overflow-hidden relative flex items-center justify-center" style="background: linear-gradient(135deg, #502379 0%, #6B2C9A 50%, #502379 100%);">
-            <div class="absolute inset-0 opacity-20" style="background-image: radial-gradient(circle at 20% 30%, rgba(255,255,255,.4) 0%, transparent 40%), radial-gradient(circle at 80% 70%, rgba(255,255,255,.3) 0%, transparent 40%);"></div>
-            <div class="relative z-10 text-center px-6">
-              <div class="text-white font-bold tracking-tight" style="font-size: clamp(2.5rem, 6vw, 4rem); letter-spacing: -0.04em;">Volt</div>
-              <div class="text-white/80 font-medium text-sm tracking-[0.3em] uppercase mt-1">Berlin</div>
-            </div>
-            <span class="absolute top-4 right-4 bg-white/95 text-primary text-[10px] font-bold uppercase tracking-wider px-3 py-1.5 rounded-full shadow-md flex items-center gap-1.5">
-              <span class="w-1.5 h-1.5 rounded-full bg-[#f59e0b] animate-pulse"></span>
-              In Entwicklung
-            </span>
+          <div class="aspect-[16/10] overflow-hidden bg-primary/5">
+            <img src="assets/volt-berlin-screenshot.jpg"
+              alt="Webdesign-Referenz: Kampagnen-Website für Volt Berlin"
+              width="930" height="784" loading="eager" fetchpriority="high" decoding="async"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
           </div>
           <div class="px-6 py-5 flex items-center justify-between">
             <div>
               <h2 class="text-lg font-bold text-primary">Kampagnen-Website</h2>
-              <p class="text-sm text-primary/60">Politik / Non-Profit · Sommer 2026</p>
+              <p class="text-sm text-primary/60">Politik / Non-Profit</p>
             </div>
+            <i class="ph ph-arrow-up-right text-primary/30 text-xl group-hover:text-accent transition-colors"></i>
           </div>
-        </div>
+        </a>
 
         <a href="https://annikablendl.com/" target="_blank" rel="noopener noreferrer"
           class="portfolio-card group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-[transform,box-shadow] duration-500">
@@ -182,7 +179,7 @@
             <span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></span>
           </div>
           <div class="aspect-[16/10] overflow-hidden bg-primary/5">
-            <img src="annikablendl.com.webp" alt="Webdesign-Referenz: Portfolio-Website für Schauspielerin und Regisseurin"
+            <img src="assets/annikablendl.com.webp" alt="Webdesign-Referenz: Portfolio-Website für Schauspielerin und Regisseurin"
               width="1920" height="958" loading="eager" fetchpriority="high" decoding="async"
               class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
           </div>
@@ -203,7 +200,7 @@
             <span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></span>
           </div>
           <div class="aspect-[16/10] overflow-hidden bg-primary/5">
-            <img src="nachhilfe-screenshot.webp" alt="Webdesign-Referenz: Lokale Landingpage für Nachhilfe-Anbieter im Isartal"
+            <img src="assets/nachhilfe-screenshot.webp" alt="Webdesign-Referenz: Lokale Landingpage für Nachhilfe-Anbieter im Isartal"
               width="1903" height="951" loading="lazy" decoding="async"
               class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
           </div>
@@ -305,10 +302,10 @@
             <div><div class="text-white/50 text-xs font-medium">WhatsApp</div><div class="font-bold text-sm text-white">0170 2783450</div></div>
             <i class="ph ph-arrow-up-right text-white/25 ml-auto"></i>
           </a>
-          <a href="mailto:balthasar.beyer@gmail.com"
+          <a href="mailto:balthasar@webdesign-isar.de"
             class="flex items-center gap-4 bg-white/5 hover:bg-white/10 transition-colors p-4 rounded-2xl border border-white/10">
             <div class="w-11 h-11 bg-accent/20 flex items-center justify-center rounded-xl text-accent text-2xl shrink-0"><i class="ph-fill ph-envelope-simple"></i></div>
-            <div><div class="text-white/50 text-xs font-medium">E-Mail</div><div class="font-bold text-sm text-white break-all">balthasar.beyer@gmail.com</div></div>
+            <div><div class="text-white/50 text-xs font-medium">E-Mail</div><div class="font-bold text-sm text-white break-all">balthasar@webdesign-isar.de</div></div>
             <i class="ph ph-arrow-up-right text-white/25 ml-auto"></i>
           </a>
           <a href="tel:+491702783450"

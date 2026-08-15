@@ -19,23 +19,20 @@
   <meta property="og:url" content="https://webdesign-isar.de/">
   <meta property="og:title" content="Webdesigner Wolfratshausen | Websites ab 300 € – Webdesign Isar">
   <meta property="og:description" content="Professionelle Websites für Unternehmen im Isartal. Festpreis ab 300 €, Lieferung in 7-10 Tagen.">
-  <meta property="og:image" content="https://webdesign-isar.de/assets/profile-pic.webp">
-  <meta property="og:image:width" content="2000">
-  <meta property="og:image:height" content="823">
+  <meta property="og:image" content="https://webdesign-isar.de/assets/unfuck-berlin.png">
+  <meta property="og:image:width" content="1040">
+  <meta property="og:image:height" content="650">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Webdesigner Wolfratshausen | Websites ab 300 €">
   <meta name="twitter:description" content="Professionelle Websites für Unternehmen im Isartal. Festpreis, persönlich betreut.">
-  <meta name="twitter:image" content="https://webdesign-isar.de/assets/profile-pic.webp">
+  <meta name="twitter:image" content="https://webdesign-isar.de/assets/unfuck-berlin.png">
 
   <meta name="theme-color" content="#0071E3">
 
   <!-- Favicon -->
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
-
-  <!-- Preload LCP image (browser mockup, above the fold on desktop) -->
-  <link rel="preload" as="image" href="assets/nachhilfe-screenshot.webp" fetchpriority="high" media="(min-width: 1024px)">
 
   <!-- Fonts (self-hosted) -->
   <link rel="stylesheet" href="fonts/fonts.css">
@@ -82,7 +79,7 @@
     "name": "Webdesign Isar – Balthasar Beyer",
     "description": "Freiberuflicher Webdesigner für Unternehmen in Wolfratshausen, Geretsried, Bad Tölz und München.",
     "url": "https://webdesign-isar.de",
-    "image": "https://webdesign-isar.de/assets/profile-pic.webp",
+    "image": "https://webdesign-isar.de/assets/unfuck-berlin.png",
     "telephone": "+491702783450",
     "email": "balthasar@webdesign-isar.de",
     "address": {
@@ -221,9 +218,9 @@
   <!-- HERO -->
   <section class="relative w-full min-h-[600px] lg:min-h-[88vh] flex items-center overflow-hidden px-4 md:px-6 pt-24 md:pt-28 pb-16 md:pb-20" style="margin-top: var(--nav-h); background: #1A2744; background-image: radial-gradient(ellipse at 15% 60%, rgba(0,113,227,0.25) 0%, transparent 55%), radial-gradient(ellipse at 85% 15%, rgba(0,113,227,0.12) 0%, transparent 45%);">
 
-    <div class="max-w-7xl mx-auto w-full relative z-20 grid lg:grid-cols-[1.05fr_1fr] gap-10 lg:gap-12 items-center">
+    <div class="max-w-7xl mx-auto w-full relative z-20">
       <!-- Text -->
-      <div class="flex flex-col items-start text-left gap-6 md:gap-7">
+      <div class="flex flex-col items-start text-left gap-6 md:gap-7 max-w-3xl">
         <h1 class="hero-elem text-[2.25rem] sm:text-5xl lg:text-[4rem] font-bold tracking-tight text-white leading-[1.05]">
           Websites für Unternehmen.
         </h1>
@@ -242,34 +239,13 @@
           </a>
         </div>
       </div>
-
-      <!-- Browser-Mockup (zweites Visual statt nur Landschaftsbild) -->
-      <div class="hero-elem hidden lg:block">
-        <div class="browser-mockup">
-          <div class="browser-mockup-bar">
-            <span style="background:#ff5f56"></span>
-            <span style="background:#ffbd2e"></span>
-            <span style="background:#27c93f"></span>
-            <div class="ml-4 px-3 py-1 rounded-md bg-white/80 text-[11px] text-primary/60 font-mono">nachhilfe-icking.de</div>
-          </div>
-          <img src="assets/nachhilfe-screenshot.webp"
-               alt="Beispiel einer Webdesign-Isar-Website: lokale Landingpage für Nachhilfe in Icking"
-               width="1903" height="951"
-               loading="eager" decoding="async">
-        </div>
-      </div>
     </div>
   </section>
 
   <!-- ÜBER MICH -->
   <section class="py-20 md:py-24 px-4 md:px-6 bg-background" aria-labelledby="ueber-mich-heading">
-    <div class="max-w-4xl mx-auto reveal flex flex-col md:flex-row items-center gap-10 md:gap-12">
-      <div class="w-40 h-40 md:w-64 md:h-64 shrink-0 rounded-full overflow-hidden border-4 border-surface shadow-2xl relative">
-        <img src="assets/profile-pic.webp" alt="Balthasar Beyer – Webdesigner aus Wolfratshausen"
-             width="764" height="1024" loading="lazy" decoding="async"
-             class="w-full h-full object-cover">
-      </div>
-      <div class="flex-1 flex flex-col items-center md:items-start text-center md:text-left">
+    <div class="max-w-3xl mx-auto reveal">
+      <div class="flex flex-col items-start text-left">
         <p class="text-accent font-semibold text-xs tracking-[0.18em] mb-3 uppercase">Über mich</p>
         <h2 id="ueber-mich-heading" class="text-3xl md:text-5xl font-bold tracking-tight text-primary mb-5">Hallo, ich bin Balthasar.</h2>
         <p class="text-primary/70 text-base md:text-lg leading-relaxed mb-4 font-medium">
@@ -295,7 +271,29 @@
         <h2 class="text-3xl md:text-5xl font-bold tracking-tight text-primary">Einblick in aktuelle Projekte</h2>
       </div>
 
-      <div id="portfolio-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <div id="portfolio-grid" class="grid sm:grid-cols-2 gap-6 md:gap-8">
+        <a href="https://unfuck.berlin/" target="_blank" rel="noopener noreferrer"
+          class="portfolio-card group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-[transform,box-shadow] duration-500">
+          <div class="h-10 bg-white border-b border-black/5 flex items-center px-5 gap-2 shrink-0">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></span>
+          </div>
+          <div class="aspect-[16/10] overflow-hidden bg-primary/5">
+            <img src="assets/unfuck-berlin.png"
+              alt="Webdesign-Referenz: Kampagnen-Website unf*ck berlin"
+              width="1040" height="650" loading="lazy" decoding="async"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="px-6 py-5 flex items-center justify-between">
+            <div>
+              <h3 class="text-lg font-bold text-primary">Wahlkampf-Kampagne</h3>
+              <p class="text-sm text-primary/60">unf*ck berlin · Volt</p>
+            </div>
+            <i class="ph ph-arrow-up-right text-primary/30 text-xl group-hover:text-accent transition-colors"></i>
+          </div>
+        </a>
+
         <a href="https://voltdeutschland.org/berlin" target="_blank" rel="noopener noreferrer"
           class="portfolio-card group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-[transform,box-shadow] duration-500">
           <div class="h-10 bg-white border-b border-black/5 flex items-center px-5 gap-2 shrink-0">

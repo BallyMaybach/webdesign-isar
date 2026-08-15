@@ -19,15 +19,15 @@
   <meta property="og:url" content="https://webdesign-isar.de/beispiele.html">
   <meta property="og:title" content="Webdesign Beispiele &amp; Referenzen | Webdesign Isar">
   <meta property="og:description" content="Echte Webdesign-Referenzen aus dem Isartal: moderne Landingpages und lokale Websites.">
-  <meta property="og:image" content="https://webdesign-isar.de/assets/profile-pic.webp">
-  <meta property="og:image:width" content="2000">
-  <meta property="og:image:height" content="823">
+  <meta property="og:image" content="https://webdesign-isar.de/assets/unfuck-berlin.png">
+  <meta property="og:image:width" content="1040">
+  <meta property="og:image:height" content="650">
 
   <!-- Twitter -->
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="Webdesign Beispiele &amp; Referenzen">
   <meta name="twitter:description" content="Echte Webdesign-Referenzen aus dem Isartal.">
-  <meta name="twitter:image" content="https://webdesign-isar.de/assets/profile-pic.webp">
+  <meta name="twitter:image" content="https://webdesign-isar.de/assets/unfuck-berlin.png">
 
   <meta name="theme-color" content="#0071E3">
 
@@ -35,7 +35,7 @@
   <link rel="icon" href="favicon.svg" type="image/svg+xml">
 
   <!-- Preload LCP -->
-  <link rel="preload" as="image" href="assets/annikablendl.com.webp" fetchpriority="high">
+  <link rel="preload" as="image" href="assets/unfuck-berlin.png" fetchpriority="high">
 
   <link rel="stylesheet" href="fonts/fonts.css">
   <link rel="stylesheet" href="styles.css">
@@ -147,7 +147,29 @@
   <!-- PORTFOLIO GRID -->
   <section id="portfolio" class="py-16 md:py-20 px-4 md:px-6 bg-surface text-primary">
     <div class="max-w-5xl mx-auto">
-      <div id="portfolio-grid" class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+      <div id="portfolio-grid" class="grid sm:grid-cols-2 gap-6 md:gap-8">
+
+        <a href="https://unfuck.berlin/" target="_blank" rel="noopener noreferrer"
+          class="portfolio-card group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-[transform,box-shadow] duration-500">
+          <div class="h-10 bg-white border-b border-black/5 flex items-center px-5 gap-2 shrink-0">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#ff5f56]"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#ffbd2e]"></span>
+            <span class="w-2.5 h-2.5 rounded-full bg-[#27c93f]"></span>
+          </div>
+          <div class="aspect-[16/10] overflow-hidden bg-primary/5">
+            <img src="assets/unfuck-berlin.png"
+              alt="Webdesign-Referenz: Kampagnen-Website unf*ck berlin"
+              width="1040" height="650" loading="eager" fetchpriority="high" decoding="async"
+              class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
+          </div>
+          <div class="px-6 py-5 flex items-center justify-between">
+            <div>
+              <h2 class="text-lg font-bold text-primary">Wahlkampf-Kampagne</h2>
+              <p class="text-sm text-primary/60">unf*ck berlin · Volt</p>
+            </div>
+            <i class="ph ph-arrow-up-right text-primary/30 text-xl group-hover:text-accent transition-colors"></i>
+          </div>
+        </a>
 
         <a href="https://voltdeutschland.org/berlin" target="_blank" rel="noopener noreferrer"
           class="portfolio-card group flex flex-col rounded-3xl overflow-hidden border border-black/5 bg-white shadow-xl hover:-translate-y-2 hover:shadow-2xl transition-[transform,box-shadow] duration-500">
@@ -180,7 +202,7 @@
           </div>
           <div class="aspect-[16/10] overflow-hidden bg-primary/5">
             <img src="assets/annikablendl.com.webp" alt="Webdesign-Referenz: Portfolio-Website für Schauspielerin und Regisseurin"
-              width="1920" height="958" loading="eager" fetchpriority="high" decoding="async"
+              width="1920" height="958" loading="lazy" decoding="async"
               class="w-full h-full object-cover object-top group-hover:scale-105 transition-transform duration-700">
           </div>
           <div class="px-6 py-5 flex items-center justify-between">
